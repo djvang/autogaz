@@ -3525,6 +3525,11 @@ label.radiobtn--center {
 	height: 49px;
 }
 
+.mobile-alert-content .flexible {
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+
 .is-closed {
 	display: none !important;
 }
