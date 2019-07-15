@@ -3387,14 +3387,20 @@ label.radiobtn--center {
 	line-height: 18px;
 	color: #333333;
 	user-select: none;
+	cursor: pointer;
 }
 
 .chip[href] {
 	text-decoration: none;
 }
 
-.chip[href]:hover,
-.chip[href]:focus,
+.chip:hover,
+.chip:focus {
+	background: #007bd4;
+	color: #fff;
+	text-decoration: none;
+}
+
 .chip.is-selected {
 	background: #333333;
 	color: #fff;
@@ -3419,6 +3425,10 @@ label.radiobtn--center {
 
 .compare-filter {
 	flex-grow: 1;
+}
+
+.compare-filter .radiobtn b {
+	font-weight: normal;
 }
 
 .compare-filter+.compare-filter {
@@ -3504,4 +3514,17 @@ label.radiobtn--center {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: #fff;
+}
+
+.mobile-alert .btn-close {
+	background-color: #ebebeb;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 49px;
+	height: 49px;
+}
+
+.is-closed {
+	display: none !important;
 }

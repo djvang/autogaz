@@ -751,7 +751,6 @@ $(document).ready(function(){
 
 
 	$('[data-hover]').on('mouseenter mouseleave', function(e) {
-		console.log(e.type, $(this).data('hover'));
 
 		var target = $(this).data('hover');
 
@@ -762,6 +761,14 @@ $(document).ready(function(){
 		} else {
 			elements.removeClass('is-hover');
 		}
+
+	});
+
+
+	$('[data-close]').on('click', function(e) {
+		var target = $(this).data('close');
+
+		$(target).addClass('is-closed');
 
 	})
 
