@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Карточка товара - Комплект (Нет в наличии)'
+        - var productCard = true
+        include partials/__head
+    body
+        #outer.product-page
+            include partials/__header.html
+            include partials/__breadcrumbs
+            .content.container.flexible
+                .product.product--kit.product--missing.flexible
+                    include partials/__product-missing
+                - var kit = true
+                include partials/__communication
+                include partials/__product-info-mob.html
+                .recent.cards-block
+                    p
+                        b Товары, которые вы смотрели
+                    include partials/__recent.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-product-card.html

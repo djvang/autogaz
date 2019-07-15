@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - 404'
+        include partials/__head
+    body
+        .page-404#outer
+            include partials/__important-info.html
+            include partials/__header.html
+            .content.container
+                img(src="images/404.jpg", width="220", height="78", alt="404")
+                b Страница не найдена :(
+                p Страница которую Вы ищете, была перемещена, удалена, переименована или никогда не существовала.
+                a(class="btn btn--primary", href="/") Перейти на главную
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

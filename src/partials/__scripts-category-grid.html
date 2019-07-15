@@ -1,0 +1,86 @@
+<script src="js/nouislider.min.js"></script>
+<script>
+// active accordion
+$('.accordion.active').siblings('.accordion-panel').css('max-height', $(this).outerHeight());
+
+// filter block more
+var filterBtnMore = $('.block__more-btn');
+
+filterBtnMore.each(function() {
+    var filterBlock = $(this).parent('.block__panel');
+    $(this).click(function() {
+        filterBlock.toggleClass('js-more-show');
+        filterBlock.parent('div').css('max-height', filterBlock.outerHeight());
+        $(this).toggleClass('js-toggle-text');
+    });
+});
+
+// range slider
+var rangeSlider = document.getElementById("price-range");
+
+noUiSlider.create(rangeSlider, {
+    start: [500, 10000],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 50000
+    },
+});
+
+var priceFrom = document.getElementById('filter-price__from');
+var priceTo = document.getElementById('filter-price__to');
+
+rangeSlider.noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle];
+
+    if (handle) {
+        priceTo.value = Math.round(value);
+    } else {
+        priceFrom.value = Math.round(value);
+    }
+});
+
+priceFrom.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([this.value, null]);
+});
+
+priceTo.addEventListener('change', function () {
+    rangeSlider.noUiSlider.set([null, this.value]);
+});
+
+// car's brand-list control
+var carBrand = $('.car-brand');
+var carBrandPanel = carBrand.parent('.accordion-panel');
+carBrand.find('.block__more-btn').on('click', function() {
+    carBrand.toggleClass('js-list').css('max-height', '290px');
+    carBrandPanel.css('max-height', '290px');
+});
+
+// scrollbar custom
+jQuery(function($){
+    $('.scrollbar-outer').scrollbar();
+});
+
+// fancybox
+var html = $('html');
+var body = $('body');
+var outer = $('#outer');
+
+$('.btn--sidebar').fancybox({
+    autoFocus: false,
+    touch: false,
+    beforeShow: function(){
+        html.addClass('modal-active');
+        body.addClass('js-modal-sidebar')
+        outer.addClass('blurred');
+    },
+    beforeClose: function(){
+        html.removeClass('modal-active');
+        outer.removeClass('blurred');
+    },
+    afterClose: function(){
+        body.removeClass('js-modal-sidebar')
+    }
+});
+</script>

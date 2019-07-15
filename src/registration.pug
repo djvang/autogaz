@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Регистрация'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer
+            include partials/__header.html
+            .content.container
+                .content__header
+                    h1 Регистрация
+                .registration.flexible
+                    .registration__form.content-form
+                        include partials/__form-registration.html
+                    .registration__info
+                        p Ваш номер мобильного телефона будет использоваться для входа в личный кабинет.
+                        p Пароль должен состоять не менее чем из 6 символов.
+                        span(class="info__btn color--link dashed", data-fancybox, data-src="#modal-sign-in") У меня уже есть аккаунт
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

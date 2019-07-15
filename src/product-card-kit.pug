@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Карточка товара - Комплект'
+        - var productCard = true
+        include partials/__head
+    body
+        #outer.product-page
+            include partials/__header.html
+            include partials/__breadcrumbs
+            .content.container.flexible
+                include partials/__product-kit
+                .promotional.cards-block
+                    p.flexible
+                        b.mob-only Похожие товары
+
+                        b.no-mob Покупатели, которые просматривали этот товар, также интересуются
+
+                        button(class="promotional__btn-comparison no-mob color--link", type="button") Сравнить все похожие
+                    include partials/__promotional-cards.html
+                - var kit = true
+                include partials/__communication
+                include partials/__product-info-mob.html
+                .recent.cards-block
+                    p
+                        b Товары, которые вы смотрели
+                    include partials/__recent.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-product-card.html

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Карточка товара'
+        - var productCard = true
+        include partials/__head
+    body
+        #outer.product-page
+            include partials/__header.html
+            .content.container.flexible.desk-only
+                .heading
+                  h3 Сравнение товаров
+                  .chips
+                    .chip.is-selected Комплекты LOVATO (4, 6, 8 цил)
+                    .chip Комплекты LOVATO (4, 6, 8 цил)
+                .compare-layout
+                  .compare-sidebar
+                    .compare-filter
+                      div.compare-filter-label Показывать:
+                      label(class="radiobtn radiobtn--center")
+                          b Все параметры
+                          input(class="radiobtn__post", name="params", type="radio", checked)
+                          span.radiomark
+                      label(class="radiobtn radiobtn--center")
+                          b Только отличия
+                          input(class="radiobtn__post", name="params", type="radio")
+                          span.radiomark
+                    .compare-specifications
+                      .compare-specification-title Характеристики
+                      .compare-specifications-list
+                        .compare-specification-item(data-hover="electronics") Электроника
+                        .compare-specification-item(data-hover="reducer") Редуктор
+                        .compare-specification-item(data-hover="nozzles") Форсунки
+                        .compare-specification-item(data-hover="balloon") Баллон
+                        .compare-specification-item(data-hover="producing country") Страна производитель
+                  .compare-body
+                    .promotional.cards-block
+                      include partials/__compare-cards.html
+                  
+            .content.container.flexible.mob-only 
+              include partials/__mob-alert.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-product-card.html
+

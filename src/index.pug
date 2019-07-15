@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Главная'
+        include partials/__head
+    body
+        #outer.main-page
+            include partials/__header.html
+            .content.container
+                include partials/__banners
+                .popular
+                    .popular__title
+                        b Популярные товары
+                    include partials/__popular-cards.html
+                include partials/__feed
+                .recent.cards-block
+                    p
+                        b Товары, которые вы смотрели
+                    include partials/__recent.html
+                .main-page__about.about
+                    b АвтоГаз12 – интернет-магазин
+                    p ГБО AutoGas12 – интернет-супермаркет ГБО от лидера в сфере оптовой и розничной продажи газобаллонного оборудования, компании Авто Газ Глобал. Главная цель нашей компании – популяризация ГБО среди потребителей Украины и ближнего зарубежья. Осуществляя свою деятельность с 2000 года, мы предлагаем купить ГБО и профессиональные услуги по его установке. Всем клиентам нашего магазина предлагаются уникальные программы лояльности и гарантирован индивидуальный подход. У нас вы можете купить ГБО в розницу или купить ГБО оптом и при этом получите прямые гарантии от производителя.
+                    .panel__more
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam exercitationem assumenda eius ad dolorum, pariatur animi voluptatum beatae quisquam nam vero doloribus similique corrupti dolore eum rerum recusandae ut facilis dolor. Natus distinctio eveniet exercitationem modi error omnis quibusdam laboriosam deserunt quod aspernatur aliquid fugiat aut ut tempore delectus possimus repellendus tempora nobis, autem dolores laudantium sequi maxime nulla! Ut molestiae quisquam totam laborum dolorum voluptates at, sunt provident distinctio culpa amet eum doloremque nemo corporis ipsa officiis tenetur natus veritatis numquam quam cupiditate minus adipisci similique delectus! Quos, mollitia illo excepturi animi quis obcaecati nemo autem facilis quod veniam?
+                    span.btn-more.color--link
+                        span.btn-more-show Читать полностью
+                        span.btn-more-hide Свернуть
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-index.html

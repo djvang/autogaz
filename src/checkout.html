@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head><meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#06266F">
+<meta name="description" content="">
+    <title>Autogas12 - Checkout</title><link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cabinet.css"/><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Source+Sans+Pro:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <div class="checkout-page" id="outer"><!-- header -->
+<header class="header">
+    <div class="header__main container flexible flexible--center">
+        <div class="header-logo"><a href="/"><img src="images/logo.svg" width="105" height="26" alt="Логотип"></a></div>
+
+        <div class="header-contacts flexible no-mob">
+            <div class="header-contacts__tel">
+                <p class="tel__heading">Заказ по телефону</p>
+                <p><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></p>
+                <ul>
+                <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+                <li><a href="#"><b>(050) 000&ndash;00&ndash;00</b></a><span>МТС</span></li>
+                <li><a href="#"><b>(057) 000&ndash;00&ndash;00</b></a><span>Городской, Харьков</span></li>
+                </ul>
+            </div>
+            <button class="btn-callback flexible flexible--center" data-fancybox data-src="#modal-callback" type="button"><i></i><span>Хотите мы вам&nbsp;перезвоним?</span></button>
+        </div>
+    </div>
+</header>
+      <div class="content container flexible">
+        <div class="checkout">
+          <div class="content__header header--checkout">
+            <h1>Оформление заказа</h1>
+            <ul class="flexible">
+              <li><b>Первый раз покупаю здесь</b></li>
+              <li><a href="#"><b class="dashed">Уже покупал</b></a></li>
+            </ul>
+          </div>
+          <form class="form-checkout" action="#" method="post" id="form-checkout">
+            <section class="section-contacts">
+              <div class="section__header">
+                <h2>Контактные данные</h2>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-user-name">Ваше имя</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control" type="text" id="form-user-name" name="name" required="required"/><span class="error-element"></span>
+                </div>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-user-surname">Фамилия</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control" type="text" id="form-user-surname" name="surname" required="required"/><span class="error-element"></span>
+                </div>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-user-tel">Номер мобильного</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control tel-mask" type="tel" id="form-user-tel" name="tel" placeholder="+38 (___) ___-__-__" required="required"/><span class="error-element"></span>
+                </div>
+              </div>
+              <div class="form-checkout__row flexible">
+                <div class="form-checkout__field-box">
+                  <label class="checkbox checkbox--center"><b>Я получатель заказа</b>
+                    <input type="checkbox" id="am-recipient" checked="checked"/><span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section class="section-contacts section-contacts--recipient">
+              <div class="section__header">
+                <h2>Контакты получателя</h2>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-recipient-name">Имя получателя</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control" type="text" id="form-recipient-name" name="name" disabled="disabled"/><span class="error-element"></span>
+                </div>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-recipient-surname">Фамилия</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control" type="text" id="form-recipient-surname" name="surname" disabled="disabled"/><span class="error-element"></span>
+                </div>
+              </div>
+              <div class="form-checkout__row flexible">
+                <label for="form-recipient-tel">Номер мобильного</label>
+                <div class="form-checkout__field-box field-box">
+                  <input class="form-control tel-mask" type="tel" id="form-recipient-tel" name="tel" placeholder="+38 (___) ___-__-__" disabled="disabled"/><span class="error-element"></span>
+                </div>
+              </div>
+            </section>
+            <section class="section-delivery">
+              <div class="section__header">
+                <h2>Способ доставки</h2>
+              </div>
+              <div class="section-delivery__method flexible">
+                <div class="method__list flexible">
+                  <p class="no-mob">По Украине:</p>
+                  <label class="radiobtn radiobtn--center" data-name="Новая Почта" data-src="#modal-delivery--novaya-pochta"><b>Новая Почта</b>
+                    <input class="radiobtn__post" type="radio" name="delivery-method" required="required"/><span class="radiomark"></span>
+                  </label>
+                  <label class="radiobtn radiobtn--center" data-name="Интайм" data-src="#modal-delivery--intaim"><b>Интайм</b>
+                    <input class="radiobtn__post" type="radio" name="delivery-method"/><span class="radiomark"></span>
+                  </label>
+                  <label class="radiobtn radiobtn--center" data-name="Автолюкс" data-src="#modal-delivery--avtolyuks"><b>Автолюкс</b>
+                    <input class="radiobtn__post" type="radio" name="delivery-method"/><span class="radiomark"></span>
+                  </label>
+                  <label class="radiobtn radiobtn--center" data-name="Деливери" data-src="#modal-delivery--delivery"><b>Деливери</b>
+                    <input class="radiobtn__post" type="radio" name="delivery-method"/><span class="radiomark"></span>
+                  </label>
+                  <label class="radiobtn radiobtn--center" data-name="Интайм" data-src="#modal-delivery--intaim"><b>Интайм</b>
+                    <input class="radiobtn__post" type="radio" name="delivery-method"/><span class="radiomark"></span>
+                  </label>
+                </div>
+                <div class="method__list flexible">
+                  <p class="no-mob">По Харькову:</p>
+                  <label class="radiobtn radiobtn--center"><b>Самовывоз</b>
+                    <input class="radiobtn__self" type="radio" name="delivery-method" id="radiobtn__self"/><span class="radiomark"></span>
+                  </label>
+                  <label class="radiobtn radiobtn--center"><b>Курьером по адресу</b>
+                    <input class="radiobtn__courier" type="radio" name="delivery-method" id="radiobtn__courier"/><span class="radiomark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="section-delivery__panel panel--post">
+                <div class="form-checkout__row flexible">
+                  <label for="delivery-city">Город <span>(населенный пункт)</span></label>
+                  <div class="form-checkout__field-box field-box">
+                    <input class="form-control" type="text" id="delivery-city" name="delivery-city" placeholder="Выберите из списка (начните ввод)..." disabled="disabled"/><span class="error-element"></span>
+                  </div>
+                </div>
+                <div class="form-checkout__row flexible">
+                  <label for="delivery-number">Номер отделения</label>
+                  <div class="form-checkout__field-box field-box">
+                    <input class="form-control" type="text" id="delivery-number" name="delivery-number" disabled="disabled"/><span class="error-element"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="section-delivery__panel panel--self">
+                <div class="flexible">
+                  <div class="col">
+                    <mark>Магазин №12</mark><b>Авторынок «Лоск» <span>Восточная сторона</span></b>
+                  </div>
+                  <div class="col">
+                    <p>пл. Юрия Кононенко, 1, 62416, Харьков</p>
+                  </div>
+                </div>
+                <div class="map" id="map"></div>
+              </div>
+              <div class="section-delivery__panel panel--courier">
+                <div class="panel__info"><b>Адресная доставка курьером доступна только по Харькову</b>
+                  <p>Заполнителя все поля адреса получателя</p>
+                </div>
+                <div class="form-checkout__row flexible">
+                  <div class="wrapper wrapper--street">
+                    <label for="delivery-street">Улица</label>
+                    <div class="field-box">
+                      <input class="form-control" id="delivery-street" type="text" name="delivery-street" disabled="disabled"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                  <div class="wrapper wrapper--house">
+                    <label for="delivery-house">Дом</label>
+                    <div class="field-box">
+                      <input class="form-control" id="delivery-house" type="text" name="delivery-house" disabled="disabled"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                  <div class="wrapper wrapper--apartment">
+                    <label for="delivery-apartment">Квартира</label>
+                    <div class="field-box">
+                      <input class="form-control" id="delivery-apartment" type="text" name="delivery-apartment" disabled="disabled"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section-payment">
+              <div class="section__header">
+                <h2>Способ оплаты</h2>
+              </div>
+              <div class="payment-method flexible">
+                <div class="radiobtn">
+                  <input type="radio" name="payment-method" id="payment-method-receipt" required="required"/>
+                  <label class="label-receipt flexible" for="payment-method-receipt"><b>Оплата при получении (наложенный платёж)</b></label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" name="payment-method" id="payment-method-cash"/>
+                  <label class="label-cash flexible" for="payment-method-cash"><b>Наличный расчёт</b></label>
+                </div>
+                <div class="radiobtn">
+                  <input type="radio" name="payment-method" id="payment-method-card"/>
+                  <label class="label-card flexible" for="payment-method-card"><b>Оплата на карту (ПриватБанк)</b></label>
+                </div>
+              </div>
+            </section>
+            <section class="section-compatibility">
+              <div class="section__header flexible">
+                <h2>Cовместимость комплекта ГБО с авто</h2><b>БЕСПЛАТНО</b>
+                <p>
+                  Наш менеджер проверит на совместимость комплект ГБО из заказа с вашим автомобилем. Укажите известную вам информацию о вашем авто</p>
+              </div>
+              <div class="js-compatibility">
+                <div class="form-checkout__row">
+                  <label class="checkbox checkbox--center"><span>Авто пригнан из США</span>
+                    <input type="checkbox" checked="checked"/><span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form-checkout__row flexible">
+                  <div class="wrapper wrapper--car-brand">
+                    <label for="personal-data-car-brand">Марка автомобиля</label>
+                    <div class="field-box">
+                      <input class="form-control" id="personal-data-car-brand" type="text" name="personal-data-car-brand"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                  <div class="wrapper wrapper--car-model">
+                    <label for="personal-data-car-model">Модель</label>
+                    <div class="field-box">
+                      <input class="form-control" id="personal-data-car-model" type="text" name="personal-data-car-model"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-checkout__row flexible space-between">
+                  <div class="wrapper wrapper--car-year">
+                    <label for="personal-data-car-year">Год выпуска</label>
+                    <div class="field-box">
+                      <input class="form-control" id="personal-data-car-year" type="text" name="personal-data-car-year"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                  <div class="wrapper wrapper--car-volume">
+                    <label for="personal-data-car-volume">Объем, л</label>
+                    <div class="field-box">
+                      <input class="form-control" id="personal-data-car-volume" type="text" name="personal-data-car-volume"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                  <div class="wrapper wrapper--car-vin">
+                    <label for="personal-data-car-vin">VIN</label>
+                    <div class="field-box">
+                      <input class="form-control" id="personal-data-car-vin" type="text" name="personal-data-car-vin"/><span class="error-element"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-checkout__row">
+                <label class="checkbox checkbox--center"><b>Не нужно проверять на совместимость</b>
+                  <input type="checkbox" id="check-compatibility"/><span class="checkmark"></span>
+                </label>
+              </div>
+              <p>Отказываясь от проверки на совместимость, я принимаю условия <a class="policy" href="#">о возврате и обмене</a></p>
+            </section>
+            <footer><span class="btn-add-comment dashed color--link"><span class="btn-more-show">Добавить комментарий к заказу</span><span class="btn-more-hide">Скрыть комментарий к заказу</span></span>
+              <div class="panel__more">
+                <textarea class="form-control" placeholder="Комментарий"></textarea>
+              </div>
+              <button class="btn btn--submit btn--secondary no-mob" type="submit">Подтвердить заказ</button>
+              <p class="no-mob">Подтверждая заказ, я принимаю условия <a href="#">пользовательского соглашения</a></p>
+            </footer>
+          </form>
+        </div>
+        <div class="order-bar">
+          <div class="order-bar__header flexible"><b>Ваш заказ</b><a href="#">Редактировать</a></div>
+          <div class="order-items">
+            <div class="order-item">
+              <div class="order-item__image no-mob"><img src="images/komplekt-kme-nevo-4-cil.png" alt=""/></div>
+              <div class="order-item__info"><span>Полный комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, фил. 11/11, тор. 42л., мул. Tomasetto)</span>
+                <div class="order-item__price-line flexible"><span class="order-item__price"><b>6 226 грн</b><span>(2 шт.)</span></span><span class="order-item__price-total"><b>12 452 грн</b></span></div>
+              </div>
+            </div>
+            <div class="order-item">
+              <div class="order-item__image no-mob"><img src="images/komplekt-kme-nevo-4-cil.png" alt=""/></div>
+              <div class="order-item__info"><span>STAG-200 GoFast 4 цил.</span>
+                <div class="order-item__price-line flexible"><span class="order-item__price"><b>100 грн</b><span>(1 шт.)</span></span><span class="order-item__price-total"><b>100 грн</b></span></div>
+              </div>
+            </div>
+            <div class="order-item">
+              <div class="order-item__image no-mob"><img src="images/komplekt-kme-nevo-4-cil.png" alt=""/></div>
+              <div class="order-item__info"><span>STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, тор. 42л., мул. Tomasetto)</span>
+                <div class="order-item__price-line flexible"><span class="order-item__price"><b>8 грн</b><span>(16 шт.)</span></span><span class="order-item__price-total"><b>128 грн</b></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="order-bar__price">
+            <div class="price__row flexible">
+              <p>Сумма всех товаров без&nbsp;скидки:</p><span> <b>862 грн</b></span>
+            </div>
+            <div class="price__row flexible">
+              <p>Сумма скидки:</p><span><b>0 грн</b></span>
+            </div>
+            <div class="price__row price__row--delivery flexible mail">
+              <p><span id="mail-title">Доставка «Новая Почта»</span><span class="btn-delivery color--link" data-fancybox="data-fancybox" data-src="#modal-delivery">Подробнее о доставке</span></p>
+              <p><b>За счёт получателя</b></p>
+            </div>
+            <div class="price__row price__row--delivery flexible self-export">
+              <p><span>Самовывоз</span><span class="btn-delivery color--link" data-fancybox="data-fancybox" data-src="#modal-delivery">Подробнее о доставке</span></p>
+              <p><b>Бесплатно :)</b></p>
+            </div>
+            <div class="price__row price__row--delivery flexible courier">
+              <p><span>Доставка курьером по Харькову</span><span class="btn-delivery color--link" data-fancybox="data-fancybox" data-src="#modal-delivery">Подробнее о доставке</span></p><span><b>50 грн</b></span>
+            </div>
+            <div class="price__row price__row--total flexible">
+              <p><b>Итого:</b></p><span><b class="total-price" id="total-price">862 грн</b><b class="total-price--courier" id="total-price--courier">912 грн</b></span>
+            </div>
+          </div>
+          <div class="order-bar__promocode">
+            <button class="btn-promo-code color--link dashed" type="button">У меня есть промо-код</button>
+            <form action="" method="post">
+              <div class="form__row flexible">
+                <input class="form-control" type="text" placeholder="Введите промо-код"/>
+                <button class="btn btn--primary" type="submit">OK</button>
+              </div>
+              <div class="promocode__message message--valid">
+                <p>Код <b>orjeunesse</b> принят!</p><span>Ваша скидка 12%</span>
+              </div>
+              <div class="promocode__message message--invalid">
+                <p>Код введен неправильно :(</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="form-footer mob-only">
+          <button class="btn btn--submit btn--secondary mob-only" type="submit" form="form-checkout">Подтвердить заказ</button>
+          <p class="mob-only">Подтверждая заказ, я принимаю условия <a href="#">пользовательского соглашения</a></p>
+        </div>
+      </div><!-- footer -->
+<footer class="footer">
+    <div class="footer-contacts container">
+        <div class="footer-contacts__tel">
+            <span>Заказ по телефону</span>
+            <ul class="flexible">
+                <li><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a></li>
+                <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-extra">
+        <div class="container flexible flexible--center">
+            <div class="copyrights">
+                <p>&copy; Интернет-магазин «AutoGas12»</p>
+            </div>
+            <div class="footer-extra__pay">
+                <span class="desktop-only inline-block">Принимаем к оплате:</span>
+                <ul class="list-inline">
+                    <li><span class="icon icon-visa"></span></li>
+                    <li><span class="icon icon-mastercard"></span></li>
+                    <li><span class="icon icon-money"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div><!-- Поиск по товарам - мобильная версия -->
+<div class="modal search-mob modal-bg-white" id="search-mob">
+    <form class="form-search" method="post" action="#">
+        <input type="search" placeholder="Поиск по товарам">
+        <button type="submit"></button>
+    </form>
+</div>
+
+<!-- Каталог товаров - мобильная и планшетная версия -->
+<div class="modal modal-catalog catalog-touch modal-bg-white" id="catalog-touch">
+    <button class="catalog-touch-close btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <div class="drilldown">
+        <div class="drilldown-container">
+            <ul class="drilldown-root catalog-list">
+                <li class="drilldown-heading">Каталог товаров</li>
+                <li>
+                    <span class="drilldown-item">Оборудование 4 поколения</span>
+                    <ul class="drilldown-sub">
+                        <li class="drilldown-back">
+                            <span class="drilldown-item">назад</span>
+                        </li>
+                        <li>
+                            <span class="drilldown-item">Комплекты</span>
+                            <ul class="drilldown-sub">
+                                <li class="drilldown-back">
+                                    <span class="drilldown-item">назад</span>
+                                </li>
+                                <li class="last-level">
+                                    <div class="last-level__more">
+                                        <p>Комплектующие для систем впрыска</p>
+                                        <a href="#">Смотреть все</a>
+                                    </div>
+                                    <div class="last-level__menu"><span>Популярные бренды</span>
+                                        <ul>
+                                            <li><a href="#">Lovato</a></li>
+                                            <li><a href="#">STAG</a></li>
+                                            <li><a href="#">LPGTech</a></li>
+                                            <li><a href="#">KME</a></li>
+                                            <li><a href="#">Alex Optima</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="last-level__menu"><span>Часто спрашивают</span>
+                                        <ul>
+                                            <li><a href="#">Полные комплекты</a></li>
+                                            <li><a href="#">TSI, FSI, TFSI</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="drilldown-item">Электроника</span></li>
+                        <li><span class="drilldown-item">Редукторы</span></li>
+                        <li><span class="drilldown-item">Форсунки и жиклеры</span></li>
+                        <li><span class="drilldown-item">Комплектующие для систем впрыска</span></li>
+                    </ul>
+                </li>
+                <li><span class="drilldown-item">Оборудование 2 поколения</span></li>
+                <li><span class="drilldown-item">Электроника, клапана газ&nbsp;-&nbsp;бензин</span></li>
+                <li><span class="drilldown-item">Баллоны</span></li>
+                <li><span class="drilldown-item">Арматура баллонов</span></li>
+                <li><span class="drilldown-item">Ремонтные комплектующие</span></li>
+                <li><span class="drilldown-item">Фильтры</span></li>
+                <li><span class="drilldown-item">Тройники и хомуты</span></li>
+                <li><span class="drilldown-item">Шланги и трубки</span></li>
+            </ul>
+        </div>
+    </div>
+    <ul class="nav-short">
+        <li><a href="#">О магазине</a></li>
+        <li><a href="#">Акции</a></li>
+        <li><a href="#">Оплата</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+    <div class="contacts-tel">
+        <p class="tel__heading">Заказ по телефону</p>
+        <p><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></p>
+        <ul>
+            <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+            <li><a href="#"><b>(050) 000&ndash;00&ndash;00</b></a><span>МТС</span></li>
+            <li><a href="#"><b>(057) 000&ndash;00&ndash;00</b></a><span>Городской, Харьков</span></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Каталог товаров - десктопная версия -->
+<div class=" modal modal-catalog modal-catalog-desktop modal-bg-white" id="catalog-desktop">
+    <div class="modal__inner">
+        <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+
+        <div class="mob-only modal--feedback">
+            <div class="flexible flexible--center">
+                <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M78.44 25.94v40.54c0 1.77-1.68 3.2-3.73 3.2H5.3c-2.05 0-3.73-1.43-3.73-3.2V25.94h76.88z" fill="#F7F7F7"/>
+                    <path d="M78.44 13.52v12.42H1.56V13.52c0-1.77 1.68-3.2 3.73-3.2H74.7c2.05 0 3.73 1.43 3.73 3.2z" fill="#C9F3FF"/>
+                    <path d="M18.2 47.7h-.15a6.2 6.2 0 1 1 0-12.39h.15a6.2 6.2 0 1 1 0 12.4z" fill="#FFC954"/>
+                    <path d="M40.08 47.7h-.16a6.2 6.2 0 1 1 0-12.39h.16a6.2 6.2 0 1 1 0 12.4z" fill="#F9B"/>
+                    <path d="M61.95 47.7h-.15a6.2 6.2 0 1 1 0-12.39h.15a6.2 6.2 0 1 1 0 12.4z" fill="#7DF5A5"/>
+                    <path d="M74.71 8.75H5.3C2.37 8.75 0 10.89 0 13.52v52.96c0 2.63 2.37 4.77 5.29 4.77H74.7c2.92 0 5.29-2.14 5.29-4.77V13.52c0-2.63-2.37-4.77-5.29-4.77zm0 59.38H5.3c-1.17 0-2.17-.76-2.17-1.65V27.5h59.7a1.56 1.56 0 1 0 0-3.13H3.11V13.53c0-.9 1-1.64 2.17-1.64H74.7c1.17 0 2.17.75 2.17 1.64v10.86H75.3a1.56 1.56 0 1 0 0 3.12h1.56v38.98c0 .9-.99 1.64-2.16 1.64z" fill="#000"/>
+                    <path d="M70.4 16.61H29.83a1.56 1.56 0 1 0 0 3.13H70.4a1.56 1.56 0 1 0 0-3.13zM10.87 17.58a1.6 1.6 0 0 0-.58-.7 1.6 1.6 0 0 0-.56-.23 1.54 1.54 0 0 0-1.17.23 1.49 1.49 0 0 0-.58.7 1.55 1.55 0 0 0 .34 1.7 1.46 1.46 0 0 0 .5.34 1.56 1.56 0 0 0 2.05-2.04zM17.12 17.58a1.6 1.6 0 0 0-.34-.5 1.57 1.57 0 0 0-2.4.23 1.6 1.6 0 0 0-.23 1.17 1.6 1.6 0 0 0 .66 1 1.5 1.5 0 0 0 .87.26 1.58 1.58 0 0 0 1.1-.46 1.73 1.73 0 0 0 .34-.5 1.66 1.66 0 0 0 .12-.6 1.55 1.55 0 0 0-.12-.6zM23.37 17.58a1.64 1.64 0 0 0-.34-.5 1.48 1.48 0 0 0-.5-.35l-.3-.08a1.54 1.54 0 0 0-1.17.23 1.49 1.49 0 0 0-.58.7 1.54 1.54 0 0 0 .15 1.46 1.48 1.48 0 0 0 .43.44 1.5 1.5 0 0 0 .87.26 1.58 1.58 0 0 0 .86-.26 1.55 1.55 0 0 0 .67-1.6 1.7 1.7 0 0 0-.09-.3zM70.56 25.37a1.58 1.58 0 0 0-1.14-.94 1.58 1.58 0 0 0-1.75.94 1.59 1.59 0 0 0 0 1.2 1.6 1.6 0 0 0 .58.7 1.54 1.54 0 0 0 1.17.23 1.6 1.6 0 0 0 .8-.43 1.53 1.53 0 0 0 .46-1.1 1.57 1.57 0 0 0-.12-.6zM24.22 52.5H11.8a1.56 1.56 0 1 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM24.22 58.75H11.8a1.56 1.56 0 1 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM46.15 52.5H33.72a1.56 1.56 0 0 0 0 3.13h12.43a1.56 1.56 0 1 0 0-3.13zM46.15 58.75H33.72a1.56 1.56 0 0 0 0 3.13h12.43a1.56 1.56 0 1 0 0-3.13zM68.02 52.5H55.6a1.56 1.56 0 0 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM68.02 58.75H55.6a1.56 1.56 0 0 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM18.2 33.75h-.15a7.77 7.77 0 0 0 0 15.52h.15a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.15a4.64 4.64 0 0 1 0-9.27h.15a4.64 4.64 0 0 1 0 9.27zM40.08 33.75h-.16a7.77 7.77 0 0 0 0 15.52h.16a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.16a4.64 4.64 0 0 1 0-9.27h.16a4.64 4.64 0 0 1 0 9.27zM61.95 33.75h-.15a7.77 7.77 0 0 0 0 15.52h.15a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.15a4.64 4.64 0 0 1 0-9.27h.15a4.64 4.64 0 0 1 0 9.27z" fill="#000"/>
+                </svg>
+                <b>Ничего не сломалось, но...</b>
+                <p>Увеличьте ширину браузера или откройте каталог заново :)</p>
+            </div>
+        </div>
+
+        <div class="tabs flexible no-mob">
+            <ul class="tabs-list">
+                <li class="active" data-tab="catalog-tab-1">Оборудование 4 поколения</li>
+                <li data-tab="catalog-tab-2">Оборудование 2 поколения</li>
+                <li data-tab="catalog-tab-3">Электроника, клапана газ&nbsp;-&nbsp;бензин</li>
+                <li data-tab="catalog-tab-4">Баллоны</li>
+                <li data-tab="catalog-tab-5">Арматура баллонов</li>
+                <li data-tab="catalog-tab-6">Ремонтные комплектующие</li>
+                <li data-tab="catalog-tab-7">Фильтры</li>
+                <li data-tab="catalog-tab-8">Тройники и хомуты</li>
+                <li data-tab="catalog-tab-9">Шланги и трубки</li>
+            </ul>
+
+            <div class="tab-content current" id="catalog-tab-1">
+                <div class="flexible">
+                    <div class="last-level">
+                        <a href="#">Комплекты</a>
+                        <div class="last-level__menu">
+                            <span>Популярные бренды</span>
+                            <ul>
+                                <li><a href="#">Lovato</a></li>
+                                <li><a href="#">STAG</a></li>
+                                <li><a href="#">LPGTech</a></li>
+                                <li><a href="#">KME</a></li>
+                                <li><a href="#">Alex Optima</a></li>
+                            </ul>
+                        </div>
+                        <div class="last-level__menu">
+                            <span>Часто спрашивают</span>
+                            <ul>
+                                <li><a href="#">Полные комплекты</a></li>
+                                <li><a href="#">TSI, FSI, TFSI</a></li>
+                            </ul>
+                        </div>
+                    <div class="last-level__more">
+                        <a href="#">Смотреть все</a>
+                    </div>
+                    </div>
+
+                    <div class="last-level">
+                        <a href="#">Электроника</a>
+                        <div class="last-level__menu">
+                            <span>Популярные бренды</span>
+                            <ul>
+                                <li><a href="#">Lovato</a></li>
+                                <li><a href="#">STAG</a></li>
+                                <li><a href="#">LPGTech</a></li>
+                                <li><a href="#">KME</a></li>
+                                <li><a href="#">Alex Optima</a></li>
+                            </ul>
+                        </div>
+                        <div class="last-level__more">
+                            <a href="#">Смотреть все</a>
+                        </div>
+                    </div>
+
+                    <div class="last-level">
+                        <a href="#">Редукторы</a>
+                        <div class="last-level__menu">
+                            <span>Популярные бренды</span>
+                            <ul>
+                                <li><a href="#">Lovato</a></li>
+                                <li><a href="#">STAG</a></li>
+                                <li><a href="#">LPGTech</a></li>
+                                <li><a href="#">KME</a></li>
+                                <li><a href="#">Alex Optima</a></li>
+                            </ul>
+                        </div>
+                        <div class="last-level__more">
+                            <a href="#">Смотреть все</a>
+                        </div>
+                    </div>
+
+                    <div class="last-level">
+                        <a href="#">Форсунки и жиклеры</a>
+                        <div class="last-level__menu">
+                            <span>Популярные бренды</span>
+                            <ul>
+                                <li><a href="#">Lovato</a></li>
+                                <li><a href="#">STAG</a></li>
+                                <li><a href="#">LPGTech</a></li>
+                                <li><a href="#">KME</a></li>
+                                <li><a href="#">Alex Optima</a></li>
+                            </ul>
+                        </div>
+                        <div class="last-level__more">
+                            <a href="#">Смотреть все</a>
+                        </div>
+                    </div>
+
+                    <div class="last-level">
+                        <a href="#">Комплектующие для систем впрыска</a>
+                        <div class="last-level__menu">
+                            <ul>
+                                <li><a href="#">Блоки управления и проводка</a></li>
+                                <li><a href="#">Датчики температуры, давления и вакуума</a></li>
+                                <li><a href="#">Датчики уровня газа</a></li>
+                                <li><a href="#">Интерфейсы</a></li>
+                                <li><a href="#">Переключатели и зуммеры</a></li>
+                            </ul>
+                        </div>
+                        <div class="last-level__more">
+                            <a href="#">Смотреть все</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="catalog-tab-2">
+                <h3>I'm tab <strong>2</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-3">
+                <h3>I'm tab <strong>3</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-4">
+                <h3>I'm tab <strong>4</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-5">
+                <h3>I'm tab <strong>5</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-6">
+                <h3>I'm tab <strong>6</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-7">
+                <h3>I'm tab <strong>7</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-8">
+                <h3>I'm tab <strong>8</strong></h3>
+            </div>
+            <div class="tab-content" id="catalog-tab-9">
+                <h3>I'm tab <strong>9</strong></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Восстановление пароля -->
+<div class="modal modal--sm modal--form modal--pass-recovery" id="modal-pass-recovery">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <header class="modal__header flexible"><b>Восстановление пароля</b></header>
+    <div class="modal__content">
+        <form class="form-pass-recovery" method="post" action="">
+            <div class="field-box">
+                <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+                <span class="error-element"></span>
+            </div>
+            <button class="btn btn--primary" type="submit">Отправить пароль по SMS</button>
+        </form>
+        <footer>
+            <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-sign-in">Я вспомнил пароль</span>
+        </footer>
+    </div>
+</div>
+
+<!-- Вход в личный кабинет -->
+<div class="modal modal--lg modal--form modal-sign-in" id="modal-sign-in">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <header class="modal__header flexible"><b>Вход в личный кабинет</b></header>
+    <div class="modal__content">
+        <p class="no-mob">Если вы когда-нибудь у нас покупали — у вас точно есть аккаунт и он привязан к номеру, вашего мобильного телефона.</p>
+        <form class="form-sign-in" action="" method="post">
+            <div class="flexible">
+                <div class="field-box">
+                    <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+                    <span class="error-element"></span>
+                </div>
+                <div class="field-box">
+                    <input class="form-control" type="password" name="password" placeholder="Пароль">
+                    <span class="switch-type"></span>
+                </div>
+            </div>
+            <footer class="flexible">
+                <button class="btn btn--secondary" type="submit">Войти</button>
+                <div class="flexible">
+                    <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-pass-recovery">Забыли пароль?</span>
+                    <hr class="mob-only">
+                    <a class="color--link dashed" href="#"><b>У меня еще нет аккаунта</b></a>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>
+
+<!-- Вход в личный кабинет (Неверный логин или пароль) -->
+<div class="modal modal--lg modal--form modal-sign-in" id="modal-sign-in-error">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <header class="modal__header flexible"><b>Вход в личный кабинет</b></header>
+    <div class="modal__content">
+        <p class="no-mob">Если вы когда-нибудь у нас покупали — у вас точно есть аккаунт и он привязан к номеру, вашего мобильного телефона.</p>
+
+        <p class="auth-error">Неверный логин или пароль</p>
+
+        <form class="form-sign-in" action="" method="post">
+            <div class="flexible">
+                <div class="field-box">
+                    <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+                    <span class="error-element"></span>
+                </div>
+                <div class="field-box">
+                    <input class="form-control" type="password" name="password" placeholder="Пароль">
+                    <span class="switch-type"></span>
+                </div>
+            </div>
+            <footer class="flexible">
+                <button class="btn btn--secondary" type="submit">Войти</button>
+                <div class="flexible">
+                    <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-pass-recovery">Забыли пароль?</span>
+                    <hr class="mob-only">
+                    <a class="color--link dashed" href="#"><b>У меня еще нет аккаунта</b></a>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>
+
+<!-- Обратный звонок -->
+<div class="modal modal--sm modal--form" id="modal-callback">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <header class="modal__header flexible"><b>Обратный звонок</b></header>
+    <div class="modal__content">
+        <form class="form-callback" method="post" action="">
+            <div class="field-box">
+                <input class="form-control" type="text" name="name" placeholder="Ваше имя">
+                <span class="error-element"></span>
+            </div>
+            <div class="field-box">
+                <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+                <span class="error-element"></span>
+            </div>
+            <button class="btn btn--primary" type="submit">Отправить запрос</button>
+        </form>
+    </div>
+</div>
+
+<!-- feedback - восстановление пароля -->
+<div class="modal modal--xs modal--feedback" id="feedback-pass-sms">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M77.87 2.97L46.9 47.67l-3.23 4.66v15.65l11.77-11.5-6.01-11.22" fill="#F5C86E"/>
+            <path d="M32.74 48.99L10 42.03 78.44 1.56v61.4L44.22 52.5" fill="#FAE196"/>
+            <path d="M43.67 67.98l-10.33-18.8L77.86 2.96 44.63 50.95l-.96 17.03z" fill="#F5B955"/>
+            <path d="M79.21.2a1.56 1.56 0 0 0-1.57.02L49.01 17.15a1.56 1.56 0 1 0 1.59 2.69L71.14 7.69 32.88 47.4l-19.04-5.82L38.68 26.9a1.56 1.56 0 0 0-1.59-2.7L9.2 40.7a1.56 1.56 0 0 0 .34 2.84l22.73 6.95L42.3 68.73l.03.05a1.56 1.56 0 0 0 2.43.32L56.3 57.83 78 64.46a1.56 1.56 0 0 0 2.01-1.5V1.57C80 1 79.7.48 79.21.21zM65.56 18L42.39 51.44c-.19.26-.28.57-.28.9v9.55l-6.85-12.46 30.3-31.44zM45.23 64.27v-9.83l7.66 2.35-7.66 7.48zm.94-12.8l30.7-44.33v53.72l-30.7-9.4z" fill="#000"/>
+            <path d="M25.7 54.3a1.56 1.56 0 0 0-2.22 0L8.9 68.9a1.56 1.56 0 0 0 2.2 2.2l14.6-14.58c.6-.61.6-1.6 0-2.21zM4.05 73.74l-3.6 3.6a1.56 1.56 0 0 0 2.22 2.2l3.6-3.6a1.56 1.56 0 0 0-2.22-2.2zM21.18 76.78a1.57 1.57 0 0 0-1.56 1.57 1.57 1.57 0 0 0 1.56 1.56 1.57 1.57 0 0 0 1.57-1.56 1.57 1.57 0 0 0-1.57-1.57zM31.7 65.62l-7.72 7.72a1.56 1.56 0 0 0 2.2 2.21l7.73-7.73a1.56 1.56 0 0 0-2.2-2.2zM58.37 65.02l-7.75 7.75a1.56 1.56 0 0 0 2.21 2.2l7.75-7.74a1.56 1.56 0 0 0-2.21-2.2zM43.2 23.97a1.57 1.57 0 0 0 1.1-2.67 1.57 1.57 0 0 0-2.21 0c-.3.29-.46.7-.46 1.1a1.57 1.57 0 0 0 1.56 1.57z" fill="#000"/>
+        </svg>
+        <b>Ожидайте пароль в SMS</b>
+        <p>Теперь с новым паролем вы можете <span class="popup-toggle color--link" onclick="$.fancybox.close();" data-fancybox data-src="#modal-sign-in">войти в ваш кабинет</span></p>
+    </div>
+  </div>
+
+<!-- feedback - заявка принята -->
+<div class="modal modal--xs modal--feedback" id="feedback-request">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M57.22 56.6l1.67-1.66a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46a2.94 2.94 0 0 1-4.16 0l-4.98-4.98a2.94 2.94 0 0 1 0-4.16l.46-.45a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67a11.6 11.6 0 0 0 0 16.41L40.8 56.6a11.6 11.6 0 0 0 16.42 0z" fill="#FF5D5D"/>
+            <path d="M36.1 35.92c.01-.73.3-1.45.85-2l.46-.46a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67-.22.23L36.1 35.92zM58.89 49.56l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46c-.56.55-1.28.84-2.01.85l12.91 12.92.23-.22 1.67-1.66a3.8 3.8 0 0 0 0-5.38z" fill="#fff"/>
+            <path d="M57.22 56.6l1.67-1.66a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46a2.94 2.94 0 0 1-4.16 0l-4.98-4.98a2.94 2.94 0 0 1 0-4.16l.46-.45a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67a11.6 11.6 0 0 0 0 16.41L40.8 56.6a11.6 11.6 0 0 0 16.42 0z" fill="#FF5D5D"/>
+            <path d="M36.1 35.92c.01-.73.3-1.45.85-2l.46-.46a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67-.22.23L36.1 35.92zM58.89 49.56l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46c-.56.55-1.28.84-2.01.85l12.91 12.92.23-.22 1.67-1.66a3.8 3.8 0 0 0 0-5.38z" fill="#fff"/>
+            <path d="M8.13 40.16V40H1.55a38.44 38.44 0 0 1 65.62-27.18L70 10V21H58.98l3.56-3.55A31.87 31.87 0 0 0 8.86 33.2l-.73 6.96zM71.87 39.84V40h6.57a38.44 38.44 0 0 1-65.62 27.18L10 70V59h11.02l-3.56 3.55a31.87 31.87 0 0 0 53.68-15.73l.73-6.97z" fill="#B3D0FF"/>
+            <path d="M38.51 34.56a5.33 5.33 0 0 0 0-7.59l-6.96-6.96a5.33 5.33 0 0 0-7.59 0l-1.67 1.67a13.08 13.08 0 0 0-3.85 9.3c0 3.52 1.37 6.83 3.85 9.32L39.7 57.7a13.13 13.13 0 0 0 9.31 3.86c3.38 0 6.75-1.29 9.31-3.85L60 56.04a5.33 5.33 0 0 0 0-7.59l-6.96-6.96a5.33 5.33 0 0 0-7.6 0l-.45.45a1.37 1.37 0 0 1-1.94 0l-4.98-4.98a1.37 1.37 0 0 1 0-1.94l.45-.46zm2.32 9.6a4.47 4.47 0 0 0 6.36 0l.46-.46a2.23 2.23 0 0 1 3.17 0l6.96 6.96a2.23 2.23 0 0 1 0 3.17l-.77.78-6.17-6.17a1.56 1.56 0 0 0-2.21 2.2l6.04 6.05a9.97 9.97 0 0 1-5.66 1.75 9.97 9.97 0 0 1-7.1-2.94l-17.4-17.41a9.98 9.98 0 0 1-2.95-7.1c0-2.69 1.05-5.2 2.94-7.1l1.67-1.67a2.23 2.23 0 0 1 3.17 0l6.96 6.96a2.23 2.23 0 0 1 0 3.17l-.45.46-.3.33-5.31-5.3a1.56 1.56 0 0 0-2.21 2.2l6.54 6.55c.13.98.57 1.87 1.28 2.58l4.98 4.98z" fill="#000"/>
+            <path d="M66.07 13.92c.61.61 1.6.61 2.21 0l.16-.15v5.68h-5.68l.88-.89a1.56 1.56 0 0 0 0-2.2A33.22 33.22 0 0 0 40 6.55a33.22 33.22 0 0 0-23.64 9.8 33.32 33.32 0 0 0-9.03 16.5 1.56 1.56 0 1 0 3.05.67A30.35 30.35 0 0 1 60.3 17.49l-2.42 2.42a1.56 1.56 0 0 0 1.1 2.67H70c.86 0 1.56-.7 1.56-1.57V10a1.56 1.56 0 0 0-2.66-1.1l-1.74 1.73A39.72 39.72 0 0 0 40 0a39.74 39.74 0 0 0-28.28 11.72A39.74 39.74 0 0 0 0 40a1.56 1.56 0 0 0 3.13 0c0-9.85 3.83-19.11 10.8-26.07a36.92 36.92 0 0 1 52.14 0z" fill="#000"/>
+            <path d="M9.69 40.15V40a1.56 1.56 0 0 0-3.13 0v.16a1.56 1.56 0 1 0 3.13 0zM78.44 38.44c-.87 0-1.56.7-1.56 1.56 0 9.85-3.84 19.11-10.8 26.07a36.92 36.92 0 0 1-52.15 0 1.56 1.56 0 0 0-2.21 0l-.16.16v-5.68h5.68l-.88.89a1.56 1.56 0 0 0 0 2.2A33.22 33.22 0 0 0 40 73.45c8.93 0 17.33-3.48 23.64-9.8a33.32 33.32 0 0 0 9.03-16.5 1.56 1.56 0 1 0-3.05-.67A30.35 30.35 0 0 1 19.7 62.51l2.42-2.42a1.56 1.56 0 0 0-1.1-2.67H10c-.86 0-1.56.7-1.56 1.57V70a1.56 1.56 0 0 0 2.66 1.1l1.74-1.73A39.72 39.72 0 0 0 40 80a39.74 39.74 0 0 0 28.28-11.72A39.74 39.74 0 0 0 80 40c0-.86-.7-1.56-1.56-1.56z" fill="#000"/>
+            <path d="M70.31 39.85V40a1.56 1.56 0 0 0 3.13 0v-.16a1.56 1.56 0 1 0-3.13 0z" fill="#000"/>
+        </svg>
+        <b>Ваша заявка принята</b>
+        <p>Наше менеджер свяжется с вами в ближайшее время</p>
+    </div>
+</div>
+
+<!-- feedback - подписка -->
+<div class="modal modal--xs modal--feedback" id="feedback-follow">
+    <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+    <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.56 28.43V72.2c0 3.45 2.8 6.25 6.25 6.25H72.2c3.45 0 6.25-2.8 6.25-6.25V28.43L43.86 2.85a6.49 6.49 0 0 0-7.72 0L1.56 28.43z" fill="#fff"/>
+            <path d="M51.32 55.55H28.68L1.56 28.43V72.2c0 3.45 2.8 6.25 6.25 6.25H72.2c3.45 0 6.25-2.8 6.25-6.25V28.43L51.32 55.55z" fill="#FE8F8D"/>
+            <path d="M47.96 52.19a11.26 11.26 0 0 0-15.92 0l-26 26c.57.16 1.16.25 1.77.25H72.2c.61 0 1.2-.1 1.76-.26l-25.99-26z" fill="#FF5D5D"/>
+            <path d="M46.47 71.56A1.57 1.57 0 0 0 48.03 70a1.57 1.57 0 0 0-1.56-1.56A1.57 1.57 0 0 0 44.91 70a1.57 1.57 0 0 0 1.56 1.56zM48.72 41.56H40c-7.4 0-13.42-6.02-13.42-13.42v-.19c0-7.4 6.02-13.42 13.42-13.42s13.42 6.02 13.42 13.42v2.88a4.98 4.98 0 0 1-9.95 0v-3.25c0-2.2-1.8-4-4-4a4.37 4.37 0 0 0 0 8.73h2.23a1.56 1.56 0 0 1 0 3.12h-2.23a7.5 7.5 0 0 1 0-14.98c3.93 0 7.13 3.2 7.13 7.13v3.25a1.85 1.85 0 0 0 3.7 0v-2.88a10.3 10.3 0 0 0-20.6 0v.19A10.3 10.3 0 0 0 40 38.44h8.72a1.56 1.56 0 0 1 0 3.12zM70.94 60.64a1.57 1.57 0 0 1-1.56-1.57 1.57 1.57 0 0 1 1.56-1.56 1.57 1.57 0 0 1 1.56 1.56 1.57 1.57 0 0 1-1.56 1.57z" fill="#000"/>
+            <path d="M79.37 27.17L44.79 1.6a8 8 0 0 0-9.58 0L.63 27.17c-.4.3-.63.77-.63 1.26V72.2C0 76.49 3.5 80 7.81 80H72.2c4.3 0 7.81-3.5 7.81-7.81V28.43c0-.5-.23-.96-.63-1.26zM37.07 4.1a4.9 4.9 0 0 1 5.86 0l33.12 24.5-24.73 24.74-2.25-2.26c-5-5-13.14-5-18.14 0l-2.25 2.26L3.95 28.6 37.07 4.1zM5.77 76.24l-.1.12a4.7 4.7 0 0 1-2.54-4.17V32.2l23.34 23.35-20.7 20.69zm3.8.63l5.3-5.3h25.6a1.56 1.56 0 0 0 0-3.13H18l4.37-4.38h11.56a1.56 1.56 0 0 0 0-3.12H25.5l4.28-4.29 3.36-3.36a9.71 9.71 0 0 1 13.72 0l3.36 3.36 20.22 20.22H9.56zm67.3-4.68a4.7 4.7 0 0 1-2.54 4.17 1.61 1.61 0 0 0-.1-.12l-20.7-20.7L69.37 39.7v12.98a1.56 1.56 0 1 0 3.13 0v-16.1l4.38-4.38V72.2z" fill="#000"/>
+        </svg>
+        <b>Спасибо за подписку!</b>
+        <p>Вы будете первым узнавать об акциях и специальных предложениях</p>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.drilldown.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyRfqL1um5q83vNzh-KulUNQ-fIEnJ_qA&amp;callback=initMap"></script>
+<script src="js/main.js"></script>
+<script>
+    // promo code
+    $('.btn-promo-code').click(function(){
+        $(this).next('form').slideToggle("100");
+    });
+
+    // contacts recipient
+    $('#am-recipient').on( "change", function() {
+        section = $('.section-contacts--recipient');
+        section.slideToggle("400").toggleClass('js-visible');
+        if ($(this).is(':checked')) {
+            section.find('input').attr("disabled", "disabled")
+        } else {
+            section.find('input').attr("disabled", false)
+        }
+    });
+
+    // check compatibility
+    $('#check-compatibility').on( "change", function() {
+        $('.js-compatibility').slideToggle('200');
+        if ($(this).is(':checked')) {
+            $('.js-compatibility').find('input').attr("disabled", "disabled")
+        } else {
+            $('.js-compatibility').find('input').attr("disabled", false)
+        }
+    });
+
+    // add comment
+    $('.btn-add-comment').click(function() {
+        $(this).siblings('.panel__more').slideToggle("100");
+        $(this).toggleClass('js-toggle-text');
+        $(this).parent('footer').toggleClass('js-comment');
+    });
+
+    // select delivery type
+    jQuery(document).ready(function() {
+        var typeBlocks = [
+            {
+                btn: $('.radiobtn__post'),
+                panel: $('.panel--post'),
+                row: $('.price__row.mail')
+            },
+            {
+                btn: $('.radiobtn__self'),
+                panel: $('.panel--self'),
+                row: $('.price__row.self-export')
+            },
+            {
+                btn: $('.radiobtn__courier'),
+                panel: $('.panel--courier'),
+                row: $('.price__row.courier')
+            }
+        ];
+
+        var typeDelivery = function(index) {
+            var btn = this.btn;
+            var panel = this.panel;
+            var row = this.row;
+            
+            btn.click(function() {
+                changeRow(row);
+                changePanel(panel);
+                changePrice(index);
+                
+                if (index === 0) {
+                    var typeTitle = $(this).parent('label').attr('data-name');
+                    var typeSrc = $(this).parent('label').attr('data-src');
+
+                    typeDeliveryPost(typeTitle, typeSrc, panel);
+                }
+            });
+        };
+        
+        var typeDeliveryPost = function(title, src) {
+            var name = $('#mail-title');
+            var btn = name.siblings('.btn-delivery');
+
+            name.html("Доставка «" + title + "»");
+            btn.attr('data-src', src);
+        };
+
+        var changePanel = function(panel) {
+            panel.addClass('js-visible');
+            panel.find('input').attr("disabled", false);
+            panel.siblings('.section-delivery__panel').removeClass('js-visible');
+            panel.siblings('.section-delivery__panel').find('input').attr("disabled", "disabled");
+        };
+
+        var changeRow = function(row) {
+            row.addClass('js-visible');
+            row.siblings('.price__row--delivery').removeClass('js-visible');
+        }; 
+
+        var changePrice = function(index) {
+            var price = $('#total-price');
+            var priceParent = price.parent('span');
+
+            if (index === 2) {
+                priceParent.addClass('js-price');
+            } else if (priceParent.hasClass('js-price')) {
+                priceParent.removeClass('js-price');
+            }
+        };
+
+        $.each(typeBlocks, typeDelivery);
+    });
+
+    // form validation
+    var err = 'Заполните поле корректно';
+    var errLength = 'Недостаточно символов';
+    var errLengthMinTwo = 'Длина должна быть не меньше 2-х символов';
+    var errLengthMaxFour = 'Длина должна быть не больше 4-х символов';
+    var errEmpty = 'Заполните поле';
+    var errDigits = 'Заполните поле цифрами';
+
+    var formCheckout = $('#form-checkout');
+
+	formCheckout.validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+            },
+            surname: {
+				required: true,
+				minlength: 2,
+			},
+			tel: {
+				requiredphone: true,
+				minlenghtphone: true,
+            },
+            "delivery-city": {
+				required: true,
+				minlength: 2,
+            },
+            "delivery-number": {
+				required: true,
+				minlength: 1,
+            },
+            "delivery-street": {
+				required: true,
+				minlength: 3,
+            },
+            "delivery-house": {
+				required: true,
+				minlength: 1,
+            },
+            "delivery-apartment": {
+				required: true,
+				minlength: 1,
+            },
+            "personal-data-car-brand": {
+				required: true,
+				minlength: 2,
+            },
+            "personal-data-car-model": {
+				required: true,
+				minlength: 2,
+            },
+            "personal-data-car-year": {
+                required: true,
+                digits: true,
+                minlength: 2,
+                maxlength: 4,
+            },
+            "personal-data-car-volume": {
+				required: true,
+				minlength: 1,
+            },
+            "personal-data-car-vin": {
+				required: true,
+				minlength: 1,
+            },
+		},
+		messages: {
+			name: {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            surname: {
+				required: err,
+				minlength: errLengthMinTwo,
+			},
+			tel: {
+				requiredphone: err,
+				minlenghtphone: errLength,
+            },
+            "delivery-city": {
+				required: err,
+				minlength: errLength,
+            },
+            "delivery-number": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "delivery-street": {
+				required: err,
+				minlength: errLength,
+            },
+            "delivery-house": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "delivery-apartment": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "personal-data-car-brand": {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            "personal-data-car-model": {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            "personal-data-car-year": {
+                required: err,
+                digits: errDigits,
+                minlength: errLengthMinTwo,
+                maxlength: errLengthMaxFour,
+            },
+            "personal-data-car-volume": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "personal-data-car-vin": {
+				required: err,
+				minlength: errEmpty,
+            },
+		},
+		highlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--error').removeClass('field-box--valid');
+		},
+		unhighlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--valid').removeClass('field-box--error');
+		},
+		errorPlacement: function(error, element) {
+            $(element).siblings('.error-element').attr("title", error.text());
+        },
+		submitHandler: function(form) {
+			$.ajax({
+				url: '',
+				type: 'POST',
+				dataType: 'json',
+				success: function(data){
+					//
+				}
+			});
+		}
+	});
+
+    // google map
+    function initMap() {
+      var uluru = {lat: 49.971205, lng: 36.126619};
+      var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 18,
+        disableDefaultUI: true,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    };
+</script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<script>
+    // slick slider mob-only
+    var devicewidth = $(window).width();
+    if(devicewidth < 768) {
+        jQuery(function($){
+        $('.slick-slider').slick({
+            arrows: false,
+            dots: true,
+            adaptiveHeight: true,
+            autoplay: true
+        });
+        });
+    };
+
+    // scrollbar custom
+    jQuery(function($){
+        $('.scrollbar-outer').scrollbar();
+    });
+</script>

@@ -1,0 +1,37 @@
+<form class="form-change-pass" method="post" action="#">
+    <div class="flexible">
+        <div class="form__fields">
+            <div class="flexible">
+                <label for="pass-current">Текущий пароль</label>
+                <div class="field-box holder">
+                    <input id="pass-current" class="form-control" type="password" name="passwordcurrent">
+                    <span class="switch-type"></span>
+                </div>
+            </div>
+
+            <div class="flexible">
+                <label for="pass-new">Новый пароль</label>
+                <div class="field-box holder">
+                    <input id="pass-new" class="form-control" type="password" name="passwordnew">
+                    <span class="switch-type"></span>
+                </div>
+            </div>
+
+            <div class="flexible">
+                <label for="pass-confirm">Повторите</label>
+                <div class="field-box holder">
+                    <input id="pass-confirm" class="form-control" type="password" name="passwordconfirm">
+                    <span class="error-element"></span>
+                </div>
+            </div>
+
+            <div class="flexible to-end">
+                <div class="holder">
+                    <button class="btn btn--primary" type="submit">Сохранить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__fields-info">Пароль должен быть не менее 6 символов, содержать цифры и латинские буквы и не должен совпадать с именем и эл.почтой</div>
+    </div>
+</form>

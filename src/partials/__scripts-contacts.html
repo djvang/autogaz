@@ -1,0 +1,23 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.drilldown.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyRfqL1um5q83vNzh-KulUNQ-fIEnJ_qA&amp;callback=initMap"></script>
+<script src="js/main.js"></script>
+<script>
+    // google map
+    function initMap() {
+      var uluru = {lat: 49.971205, lng: 36.126619};
+      var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 18,
+        disableDefaultUI: true,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    };
+</script>

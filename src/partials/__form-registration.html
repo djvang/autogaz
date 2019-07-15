@@ -1,0 +1,51 @@
+<form class="form-registration" method="post" action="">
+    <div class="flexible">
+        <label for="reg-name">Ваше имя</label>
+        <div class="field-box holder">
+            <input id="reg-name" class="form-control" type="text" name="name">
+            <span class="error-element"></span>
+        </div>
+    </div>
+
+    <div class="flexible">
+        <label for="reg-pass">Номер мобильного</label>
+        <div class="field-box holder">
+            <input id="reg-pass" class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+            <span class="error-element"></span>
+        </div>
+    </div>
+
+    <div class="flexible">
+        <label for="reg-pass">Пароль</label>
+        <div class="field-box holder">
+            <input id="reg-pass" class="form-control" type="password" name="password">
+            <span class="switch-type"></span>
+        </div>
+    </div>
+
+    <div class="flexible to-end">
+        <div class="holder">
+            <label class="checkbox">
+                Хочу получать уведомления по эл.почте о акциях от АвтоГаз12
+                <input type="checkbox" checked>
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="flexible">
+        <label for="reg-email">Электронная почта</label>
+        <div class="field-box holder">
+            <input id="reg-email" class="form-control" type="email" name="email">
+            <span class="error-element"></span>
+        </div>
+    </div>
+
+    <div class="flexible to-end">
+        <div class="holder">
+            <button class="btn btn--secondary" type="submit">Зарегистрироваться</button>
+
+            <p>Регистрируясь, я принимаю условия <a href="#">пользовательского соглашения</a></p>
+        </div>
+    </div>
+</form>

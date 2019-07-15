@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Акции'
+        include partials/__head
+    body
+        #outer
+            include partials/__important-info.html
+            include partials/__header.html
+            .content.container.flexible
+                aside.desktop-only
+                    nav
+                        ul
+                            li.active
+                                a(href="#") Акции
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Статьи и обзоры
+                        ul
+                            li
+                                a(href="#") Часто задаваемые вопросы
+                        ul
+                            li
+                                a(href="#") Способы оплаты
+                            li
+                                a(href="#") Условия доставки
+                            li
+                                a(href="#") Обмен и возврат товаров
+                        ul
+                            li
+                                a(href="#") О магазине
+                            li
+                                a(href="#") Установка ГБО                
+                main.main-promotions
+                    header.has-dropdown.flexible
+                        h1 Акции
+                        .heading-dropdown.dropdown.no-desktop
+                            button(class="dropdown__btn", type="button") Полезное
+                            .dropdown__content
+                                ul
+                                    li
+                                        a(href="#") Акции
+                                    li
+                                        a(href="#") Новости
+                                    li
+                                        a(href="#") Статьи и обзоры
+                                    li
+                                        a(href="#") Часто задаваемые вопросы
+                                    li
+                                        a(href="#") Способы оплаты
+                                    li
+                                        a(href="#") Условия доставки
+                                    li
+                                        a(href="#") Обмен и возврат товаров
+                                    li
+                                        a(href="#") О магазине
+                                    li
+                                        a(href="#") Установка ГБО
+                    .promotions.flexible
+                        .promotions__item
+                            a(href="#")
+                                .item__preview
+                                    img(src="images/img.jpg", alt="")
+                                    .promotion-counter.flexible
+                                        b 30 #[span дней]
+                                        span Осталось до конца акции
+                                b Самая низкая цена! Комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, фил. 11/11) + тор. 42л. Atiker + мул. Tomasetto
+                        .promotions__item
+                            a(href="#")
+                                .item__preview
+                                    img(src="images/img.jpg", alt="")
+                                    .promotion-counter.flexible
+                                        b 1 #[span день]
+                                        span Осталось до конца акции
+                                b Скидки на акционные мультиклапаны Tomasetto
+                        .promotions__item
+                            a(href="#")
+                                .item__preview
+                                    img(src="images/img.jpg", alt="")
+                                    .promotion-counter.flexible
+                                        b 12 #[span дней]
+                                        span Осталось до конца акции
+                                b Акция на комплект Tomasetto! Редуктор AT-07 + Мультиклапан
+                        .promotions__item.item--ended
+                            a(href="#")
+                                .item__preview
+                                    img(src="images/img.jpg", alt="")
+                                    .promotion-counter.flexible.ended
+                                        b Акция завершена
+                                b Самая низкая цена! Комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek 30, фил. 11/11)
+                        .promotions__item.item--ended
+                            a(href="#")
+                                .item__preview
+                                    img(src="images/img.jpg", alt="")
+                                    .promotion-counter.flexible.ended
+                                        b Акция завершена
+                                b Акция на комплект Tomasetto! Редуктор AT-07 + Мультиклапан
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

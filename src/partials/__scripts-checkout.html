@@ -1,0 +1,274 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.drilldown.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyRfqL1um5q83vNzh-KulUNQ-fIEnJ_qA&amp;callback=initMap"></script>
+<script src="js/main.js"></script>
+<script>
+    // promo code
+    $('.btn-promo-code').click(function(){
+        $(this).next('form').slideToggle("100");
+    });
+
+    // contacts recipient
+    $('#am-recipient').on( "change", function() {
+        section = $('.section-contacts--recipient');
+        section.slideToggle("400").toggleClass('js-visible');
+        if ($(this).is(':checked')) {
+            section.find('input').attr("disabled", "disabled")
+        } else {
+            section.find('input').attr("disabled", false)
+        }
+    });
+
+    // check compatibility
+    $('#check-compatibility').on( "change", function() {
+        $('.js-compatibility').slideToggle('200');
+        if ($(this).is(':checked')) {
+            $('.js-compatibility').find('input').attr("disabled", "disabled")
+        } else {
+            $('.js-compatibility').find('input').attr("disabled", false)
+        }
+    });
+
+    // add comment
+    $('.btn-add-comment').click(function() {
+        $(this).siblings('.panel__more').slideToggle("100");
+        $(this).toggleClass('js-toggle-text');
+        $(this).parent('footer').toggleClass('js-comment');
+    });
+
+    // select delivery type
+    jQuery(document).ready(function() {
+        var typeBlocks = [
+            {
+                btn: $('.radiobtn__post'),
+                panel: $('.panel--post'),
+                row: $('.price__row.mail')
+            },
+            {
+                btn: $('.radiobtn__self'),
+                panel: $('.panel--self'),
+                row: $('.price__row.self-export')
+            },
+            {
+                btn: $('.radiobtn__courier'),
+                panel: $('.panel--courier'),
+                row: $('.price__row.courier')
+            }
+        ];
+
+        var typeDelivery = function(index) {
+            var btn = this.btn;
+            var panel = this.panel;
+            var row = this.row;
+            
+            btn.click(function() {
+                changeRow(row);
+                changePanel(panel);
+                changePrice(index);
+                
+                if (index === 0) {
+                    var typeTitle = $(this).parent('label').attr('data-name');
+                    var typeSrc = $(this).parent('label').attr('data-src');
+
+                    typeDeliveryPost(typeTitle, typeSrc, panel);
+                }
+            });
+        };
+        
+        var typeDeliveryPost = function(title, src) {
+            var name = $('#mail-title');
+            var btn = name.siblings('.btn-delivery');
+
+            name.html("Доставка «" + title + "»");
+            btn.attr('data-src', src);
+        };
+
+        var changePanel = function(panel) {
+            panel.addClass('js-visible');
+            panel.find('input').attr("disabled", false);
+            panel.siblings('.section-delivery__panel').removeClass('js-visible');
+            panel.siblings('.section-delivery__panel').find('input').attr("disabled", "disabled");
+        };
+
+        var changeRow = function(row) {
+            row.addClass('js-visible');
+            row.siblings('.price__row--delivery').removeClass('js-visible');
+        }; 
+
+        var changePrice = function(index) {
+            var price = $('#total-price');
+            var priceParent = price.parent('span');
+
+            if (index === 2) {
+                priceParent.addClass('js-price');
+            } else if (priceParent.hasClass('js-price')) {
+                priceParent.removeClass('js-price');
+            }
+        };
+
+        $.each(typeBlocks, typeDelivery);
+    });
+
+    // form validation
+    var err = 'Заполните поле корректно';
+    var errLength = 'Недостаточно символов';
+    var errLengthMinTwo = 'Длина должна быть не меньше 2-х символов';
+    var errLengthMaxFour = 'Длина должна быть не больше 4-х символов';
+    var errEmpty = 'Заполните поле';
+    var errDigits = 'Заполните поле цифрами';
+
+    var formCheckout = $('#form-checkout');
+
+	formCheckout.validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+            },
+            surname: {
+				required: true,
+				minlength: 2,
+			},
+			tel: {
+				requiredphone: true,
+				minlenghtphone: true,
+            },
+            "delivery-city": {
+				required: true,
+				minlength: 2,
+            },
+            "delivery-number": {
+				required: true,
+				minlength: 1,
+            },
+            "delivery-street": {
+				required: true,
+				minlength: 3,
+            },
+            "delivery-house": {
+				required: true,
+				minlength: 1,
+            },
+            "delivery-apartment": {
+				required: true,
+				minlength: 1,
+            },
+            "personal-data-car-brand": {
+				required: true,
+				minlength: 2,
+            },
+            "personal-data-car-model": {
+				required: true,
+				minlength: 2,
+            },
+            "personal-data-car-year": {
+                required: true,
+                digits: true,
+                minlength: 2,
+                maxlength: 4,
+            },
+            "personal-data-car-volume": {
+				required: true,
+				minlength: 1,
+            },
+            "personal-data-car-vin": {
+				required: true,
+				minlength: 1,
+            },
+		},
+		messages: {
+			name: {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            surname: {
+				required: err,
+				minlength: errLengthMinTwo,
+			},
+			tel: {
+				requiredphone: err,
+				minlenghtphone: errLength,
+            },
+            "delivery-city": {
+				required: err,
+				minlength: errLength,
+            },
+            "delivery-number": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "delivery-street": {
+				required: err,
+				minlength: errLength,
+            },
+            "delivery-house": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "delivery-apartment": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "personal-data-car-brand": {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            "personal-data-car-model": {
+				required: err,
+				minlength: errLengthMinTwo,
+            },
+            "personal-data-car-year": {
+                required: err,
+                digits: errDigits,
+                minlength: errLengthMinTwo,
+                maxlength: errLengthMaxFour,
+            },
+            "personal-data-car-volume": {
+				required: err,
+				minlength: errEmpty,
+            },
+            "personal-data-car-vin": {
+				required: err,
+				minlength: errEmpty,
+            },
+		},
+		highlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--error').removeClass('field-box--valid');
+		},
+		unhighlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--valid').removeClass('field-box--error');
+		},
+		errorPlacement: function(error, element) {
+            $(element).siblings('.error-element').attr("title", error.text());
+        },
+		submitHandler: function(form) {
+			$.ajax({
+				url: '',
+				type: 'POST',
+				dataType: 'json',
+				success: function(data){
+					//
+				}
+			});
+		}
+	});
+
+    // google map
+    function initMap() {
+      var uluru = {lat: 49.971205, lng: 36.126619};
+      var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 18,
+        disableDefaultUI: true,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    };
+</script>

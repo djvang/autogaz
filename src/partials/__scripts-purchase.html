@@ -1,0 +1,31 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.drilldown.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var orders = $('.purchase__order');
+
+    orders.each(function() {
+        var orderHeader = $(this).find('.order__header');
+        var orderPanel = $(this).find('.order__panel');
+        var moreBtn = $(this).find('.btn-more');
+        var morePanel = $(this).find('.panel__more');
+
+        orderPanel.hide();
+
+        orderHeader.click(function() {
+          orderPanel.slideToggle(200);
+          $(this).toggleClass('active');
+        });
+
+        moreBtn.each(function() {
+          $(this).click(function() {
+            morePanel.toggleClass('js-show');
+            moreBtn.toggleClass('js-toggle-text');
+          });
+        });
+    });
+</script>

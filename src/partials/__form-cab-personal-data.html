@@ -1,0 +1,214 @@
+<form class="form-personal-data" method="post" action="#">
+    <div class="form__fields">
+        <div class="flexible">
+            <label for="personal-data-name">Ваше имя</label>
+            <div class="field-box holder">
+                <input id="personal-data-name" class="form-control" type="text" name="name">
+                <span class="error-element"></span>
+            </div>
+        </div>
+
+        <div class="flexible">
+            <label for="personal-data-surname">Фамилия</label>
+            <div class="field-box holder">
+                <input id="personal-data-surname" class="form-control" type="text" name="surname">
+                <span class="error-element"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flexible align-center form-row-tel">
+        <div class="form__fields">
+            <div class="flexible">
+                <span>Номер мобильного</span>
+
+                <div class="holder">
+                    <b>+38 (093) 000-00-00</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__fields-info">Ваш номер мобильного телефона является логином для входа в личный кабинет.</div>
+    </div>
+
+    <div class="form__fields">
+        <div class="flexible">
+            <label for="personal-data-email">Электронная почта</label>
+            <div class="field-box holder">
+                <input id="personal-data-email" class="form-control" type="email" name="email">
+                <span class="error-element"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Адрес доставки -->
+    <div class="form-row-address form-row-section">
+        <div class="form__fields">
+            <hr>
+            <p>
+                <b>Адрес для доставки курьером</b>
+                <span>Пока доступно только для Харькова</span>
+            </p>
+        </div>
+
+        <div class="flexible">
+            <div class="form__fields">
+                <label for="personal-data-street">Улица</label>
+                <div class="field-box">
+                    <input id="personal-data-street" class="form-control" type="text" name="street">
+                    <span class="error-element"></span>
+                </div>
+
+                <div class="flexible">
+                    <div class="wrapper wrapper--house">
+                        <label for="personal-data-house">Дом</label>
+                        <div class="field-box">
+                            <input id="personal-data-house" class="form-control" type="text" name="house">
+                            <span class="error-element"></span>
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--apartment">
+                        <label for="personal-data-apartment">Квартира</label>
+                        <div class="field-box">
+                            <input id="personal-data-apartment" class="form-control" type="text" name="apartment">
+                            <span class="error-element"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__fields-info">Если планируете пользоваться нашей доставкой по городу, советуем указать адрес, что бы не вводить его при каждой покупке.</div>
+        </div>
+    </div>
+
+    <!-- Дата рождения -->
+    <div class="form-row-birthdate form-row-section">
+        <div class="form__fields">
+            <hr>
+            <p>
+                <b>Дата рождения</b>
+            </p>
+        </div>
+
+        <div class="flexible">
+            <div class="form__fields">
+                <div class="flexible">
+                    <div class="wrapper wrapper--birth-day">
+                        <label for="personal-data-birth-day">День</label>
+                        <div class="field-box">
+                            <input id="personal-data-birth-day" class="form-control" type="text" name="birthday">
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--birth-month">
+                        <label for="personal-data-birth-month">Месяц</label>
+                        <div class="field-box">
+                            <select id="personal-data-birth-month" class="cs-select" name="birthmonth">
+                                <option value="" disabled selected>---</option>
+                                <option value="Январь">Январь</option>
+                                <option value="Февраль">Февраль</option>
+                                <option value="Март">Март</option>
+                                <option value="Апрель">Апрель</option>
+                                <option value="Май">Май</option>
+                                <option value="Июнь">Июнь</option>
+                                <option value="Июль">Июль</option>
+                                <option value="Август">Август</option>
+                                <option value="Сентябрь">Сентябрь</option>
+                                <option value="Октябрь">Октябрь</option>
+                                <option value="Ноябрь">Ноябрь</option>
+                                <option value="Декабрь">Декабрь</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--birth-year">
+                        <label for="personal-data-birth-year">Год</label>
+                        <div class="field-box">
+                            <input id="personal-data-birth-year" class="form-control" type="text" name="birthyear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__fields-info">Мы придумаем специальное предложение к вашему дню рождения :)</div>
+        </div>
+    </div>
+
+    <!-- Мой автомобиль -->
+    <div class="form-row-car form-row-section">
+        <div class="form__fields">
+            <hr>
+            <p>
+                <b>Мой автомобиль</b>
+            </p>
+        </div>
+
+        <div class="flexible">
+            <div class="form__fields js-compatibility">
+                <label class="checkbox checkbox--center">
+                    Авто пригнан из США
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+
+                <div class="flexible">
+                    <div class="wrapper wrapper--car-brand">
+                        <label for="personal-data-car-brand">Марка автомобиля</label>
+                        <div class="field-box">
+                            <input id="personal-data-car-brand" class="form-control" type="text" name="personal-data-car-brand">
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--car-model">
+                        <label for="personal-data-car-model">Модель</label>
+                        <div class="field-box">
+                            <input id="personal-data-car-model" class="form-control" type="text" name="personal-data-car-model">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flexible space-between">
+                    <div class="wrapper wrapper--car-year">
+                        <label for="personal-data-car-year">Год выпуска</label>
+                        <div class="field-box">
+                            <input id="personal-data-car-year" class="form-control" type="text" name="personal-data-car-year">
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--car-volume">
+                        <label for="personal-data-car-volume">Объем, л</label>
+                        <div class="field-box">
+                            <input id="personal-data-car-volume" class="form-control" type="text" name="personal-data-car-volume">
+                        </div>
+                    </div>
+
+                    <div class="wrapper wrapper--car-vin">
+                        <label for="personal-data-car-vin">VIN</label>
+                        <div class="field-box">
+                            <input id="personal-data-car-vin" class="form-control" type="text" name="personal-data-car-vin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__fields-info top">Наш менеджер будет проверять совместимостимость комплектов ГБО с вашим автомобилем. При необходимости будет подбирать подходящие аналоги.</div>
+        </div>
+
+        <div class="flexible align-center">
+            <div class="form__fields">
+                <label class="checkbox checkbox--center">
+                    <b>Не нужно проверять на совместимость</b>
+                    <input type="checkbox" id="check-compatibility">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="form__fields-info">Отказываясь от проверки на совместимость, я принимаю <a href="#" class="policy">условия о возврате и обмене</a></div>
+        </div>
+    </div>
+
+    <div class="form__fields">
+        <button class="btn btn--primary" type="submit">Сохранить данные</button>
+    </div>
+</form>

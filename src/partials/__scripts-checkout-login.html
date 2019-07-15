@@ -1,0 +1,58 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.drilldown.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // promo code
+    $('.btn-promo-code').click(function(){
+        $(this).next('form').slideToggle("100");
+    });
+
+    // form validation
+    var err = 'Заполните поле корректно';
+    var errLength = 'Недостаточно символов';
+
+    var formCheckout = $('#form-checkout-login');
+
+	formCheckout.validate({
+		rules: {
+			tel: {
+				requiredphone: true,
+				minlenghtphone: true,
+            },
+            password: {
+				required: true,
+                minlength: 6,
+            },
+		},
+		messages: {
+			tel: {
+				requiredphone: err,
+				minlenghtphone: errLength,
+            },
+		},
+		highlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--error').removeClass('field-box--valid');
+		},
+		unhighlight: function(element) {
+            $(element).parent('.field-box').addClass('field-box--valid').removeClass('field-box--error');
+		},
+		errorPlacement: function(error, element) {
+            $(element).siblings('.error-element').attr("title", error.text());
+        },
+		submitHandler: function(form) {
+			$.ajax({
+				url: '',
+				type: 'POST',
+				dataType: 'json',
+				success: function(data){
+					//
+				}
+			});
+		}
+	});
+</script>

@@ -1,0 +1,112 @@
+<!-- header -->
+<header class="header">
+  <div class="header__top desktop-only">
+    <div class="container flexible pad-ctrl">
+      <p class="tagline">Интернет-магазин ГБО на авто</p>
+      <ul class="nav-short list-inline">
+        <li><a href="#">О магазине</a></li>
+        <li><a href="#">Акции</a></li>
+        <li><a href="#">Оплата</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header__main container flexible flexible--center">
+    <div class="header-logo"><a href="/"><img src="images/logo.svg" width="105" height="26" alt="Логотип"></a></div>
+
+    <div class="header-contacts flexible no-mob">
+      <div class="header-contacts__tel">
+        <p class="tel__heading">Заказ по телефону</p>
+        <p><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></p>
+        <ul>
+          <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+          <li><a href="#"><b>(050) 000&ndash;00&ndash;00</b></a><span>МТС</span></li>
+          <li><a href="#"><b>(057) 000&ndash;00&ndash;00</b></a><span>Городской, Харьков</span></li>
+        </ul>
+      </div>
+      <div class="header-contacts__schedule desktop-only">
+        <p>Пн-Пт с 9:00 до 18:00</p>
+        <p>Сб с 9:00 до 15:00</p>
+        <p>Вс с 10:00 до 15:00</p>
+      </div>
+      <button class="btn-callback flexible flexible--center desktop-only" data-fancybox data-src="#modal-callback" type="button"><i></i><span>Хотите мы вам&nbsp;перезвоним?</span></button>
+    </div>
+
+    <div class="header-other flexible">
+      <button class="btn-mob-search mob-only" id="btn-mob-search" data-fancybox data-src="#search-mob" type="button"></button>
+
+      <!-- При наличии товаров в сравнении добавляется класс 'added' -->
+      <a class="btn-comparison tablet-only" href="#">
+        <span class="count">4</span>
+      </a>
+
+      <!-- После авторизации добавляется класс 'signed' -->
+      <div class="header-sign">
+        <span class="btn-sign" data-fancybox data-src="#modal-sign-in" tabindex="0" role="button" aria-pressed="false">
+          <i class="header-sign-icon"></i>
+          <span class="no-mob">Войдите<br> в личный кабинет</span>
+        </span>
+
+        <p class="no-mob">Здравствуйте,</p>
+        <a href="#">
+          <i class="header-sign-icon"></i>
+          <span class="no-mob">Константин Константинов</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- header fixed -->
+  <div class="header-fixed">
+    <div class="container flexible">
+      <button class="btn-catalog no-desktop" id="btn-catalog-touch" data-fancybox data-src="#catalog-touch" type="button">Каталог товаров</button>
+      <button class="btn-catalog desktop-only" id="btn-catalog-desktop" data-fancybox data-src="#catalog-desktop" data-options="{&quot;touch&quot; : false}" type="button">Каталог товаров</button>
+
+      <div class="header-form-search no-mob">
+        <form class="form-search" method="POST" action="#">
+          <input type="search" placeholder="Поиск по товарам">
+          <button type="submit"></button>
+        </form>
+      </div>
+
+      <div class="box-btns flexible">
+        <!-- При наличии товаров в сравнении добавляется класс 'added' -->
+        <a class="btn-comparison desktop-only" href="#" title="К сравнению">
+          <span class="count">4</span>
+        </a>
+
+        <!-- При наличии товаров в корзине добавляется класс 'added' -->
+        <div class="dropdown">
+          <button class="btn-cart dropdown__btn" type="button">
+            <span class="count">12</span>
+            <b class="no-mob">Корзина</b>
+          </button>
+
+          <div class="dropdown__content">
+            <div class="not-added-content">
+              <div class="message">
+                <b>Ваша корзина пуста</b>
+                <p>Но это легко исправить, посмотрите
+                  <a href="#">все акции</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="added-content">
+              <div class="message">
+                <p>В корзине <span>12 товаров</span> на&nbsp;сумму <span>136 750</span> грн</p>
+              </div>
+              <a class="btn-order" href="#">Оформить заказ</a>
+              <p>
+                <a href="#"><i class="icon-cart-link"></i><span>Перейти в корзину</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

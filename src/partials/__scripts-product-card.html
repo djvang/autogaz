@@ -1,0 +1,43 @@
+<script>
+// slick slider mob-only
+if($(window).width() < 768) {
+    jQuery(function($){
+        $('.slick-slider').slick({
+            arrows: false,
+            dots: true,
+            adaptiveHeight: true,
+            autoplay: true
+        });
+    });
+};
+
+// scrollbar custom
+jQuery(function($){
+    $('.scrollbar-outer').scrollbar();
+});
+
+// gallery
+var gThumbsItems = $('.thumbs__item');
+
+gThumbsItems.click(function() {
+    if(!$(this).hasClass("active")) $(this).addClass('active');
+    $(this).siblings('div').removeClass('active');
+
+    var i = $(this).data('pic');
+
+    var gPreviewBox = $(this).parent('.gallery__thumbs').siblings('.gallery__preview').find('[data-pic="' + i + '"]');
+
+    if(!$(gPreviewBox).hasClass("js-visible")) $(gPreviewBox).addClass('js-visible');
+    $(gPreviewBox).siblings('div').removeClass('js-visible');
+});
+
+// description more
+var moreBtn = $('.btn-more');
+
+moreBtn.each(function() {
+    $(this).click(function() {
+        $(this).siblings('.panel__more').toggleClass('js-show');
+        $(this).toggleClass('js-toggle-text');
+    });
+});
+</script>

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#06266F">
+    <meta name="description" content="">
+    <title>Autogas12 - Modals</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800|Source+Sans+Pro:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <style>
+    .modals-page .content {
+    	padding: 40px 20px;
+    }
+
+    .modals-page h4 {
+    	margin-top: 0;
+    }
+
+    .modals-page .content .btn {
+    	margin-right: 40px;
+    	margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+    	.modals-page .content .btn {
+    		margin-right: 0;
+    	}
+    }
+    </style>
+  </head>
+  <body>
+    <div class="modals-page" id="outer">
+      <!-- header -->
+      <header class="header">
+        <div class="header__top desktop-only">
+            <div class="container flexible pad-ctrl">
+                <p class="tagline">Интернет-магазин ГБО на авто</p>
+                <ul class="nav-short list-inline">
+                    <li><a href="#">О магазине</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header__main container flexible flexible--center">
+            <div class="header-logo"><a href="/"><img src="images/logo.svg" width="105" height="26" alt="Логотип"></a></div>
+
+            <div class="header-contacts flexible no-mob">
+                <div class="header-contacts__tel">
+                    <p class="tel__heading">Заказ по телефону</p>
+                    <p><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></p>
+                    <ul>
+                        <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+                        <li><a href="#"><b>(050) 000&ndash;00&ndash;00</b></a><span>МТС</span></li>
+                        <li><a href="#"><b>(057) 000&ndash;00&ndash;00</b></a><span>Городской, Харьков</span></li>
+                    </ul>
+                </div>
+                <div class="header-contacts__schedule desktop-only">
+                    <p>Пн-Пт с 9:00 до 18:00</p>
+                    <p>Сб с 9:00 до 15:00</p>
+                    <p>Вс с 10:00 до 15:00</p>
+                </div>
+                <button class="btn-callback flexible flexible--center desktop-only" data-fancybox data-src="#modal-callback" type="button"><i></i><span>Хотите мы вам&nbsp;перезвоним?</span></button>
+            </div>
+
+            <div class="header-other flexible">
+                <button class="btn-mob-search mob-only" id="btn-mob-search" data-fancybox data-src="#search-mob" type="button"></button>
+
+                <!-- При наличии товаров в сравнении добавляется класс 'added' -->
+                <a class="btn-comparison tablet-only" href="#">
+                    <span class="count">4</span>
+                </a>
+
+                <!-- После авторизации добавляется класс 'signed' -->
+                <div class="header-sign">
+                    <span class="btn-sign" data-fancybox data-src="#modal-sign-in" tabindex="0" role="button" aria-pressed="false">
+                        <i class="header-sign-icon"></i>
+                        <span class="no-mob">Войдите<br> в личный кабинет</span>
+                    </span>
+
+                    <p class="no-mob">Здравствуйте,</p>
+                    <a href="#">
+                        <i class="header-sign-icon"></i>
+                        <span class="no-mob">Константин Константинов</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- header fixed -->
+        <div class="header-fixed">
+            <div class="container flexible">
+                <button class="btn-catalog no-desktop" id="btn-catalog-touch" data-fancybox data-src="#catalog-touch" type="button">Каталог товаров</button>
+                <button class="btn-catalog desktop-only" id="btn-catalog-desktop" data-fancybox data-src="#catalog-desktop" data-options="{&quot;touch&quot; : false}" type="button">Каталог товаров</button>
+
+                <div class="header-form-search no-mob">
+                    <form class="form-search" method="POST" action="#">
+                        <input type="search" placeholder="Поиск по товарам">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+
+                <div class="box-btns flexible">
+                    <!-- При наличии товаров в сравнении добавляется класс 'added' -->
+                    <a class="btn-comparison desktop-only" href="#" title="К сравнению">
+                        <span class="count">4</span>
+                    </a>
+
+                    <!-- При наличии товаров в корзине добавляется класс 'added' -->
+                    <div class="dropdown">
+                        <button class="btn-cart dropdown__btn" type="button">
+                            <span class="count">12</span>
+                            <b class="no-mob">Корзина</b>
+                        </button>
+
+                        <div class="dropdown__content">
+                            <div class="not-added-content">
+                                <div class="message">
+                                    <b>Ваша корзина пуста</b>
+                                    <p>Но это легко исправить, посмотрите
+                                        <a href="#">все акции</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="added-content">
+                                <div class="message">
+                                    <p>В корзине <span>12 товаров</span> на&nbsp;сумму <span>136 750</span> грн</p>
+                                </div>
+                                <a class="btn-order" href="#">Оформить заказ</a>
+                                <p>
+                                    <a href="#"><i class="icon-cart-link"></i><span>Перейти в корзину</span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+
+      <div class="content container">
+        <section>
+          <h4>Information</h4>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-delivery">Доставка</button>
+        </section>
+        <section>
+          <h4>Forms</h4>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-sign-in">Вход в личный кабинет</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-sign-in-error">Вход в личный кабинет - неверно</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-pass-recovery">Восстановление пароля</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-callback">Обратный звонок</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-feedback">Обратная связь</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-issue">Проблемы с заказом</button>
+        </section>
+        <section>
+          <h4>Forms no desktop call</h4>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-question">Напишите свой вопрос</button>
+          <button class="btn btn--primary" data-fancybox data-src="#modal-evaluation">Оцените товар</button>
+        </section>
+        <section>
+          <h4>Thanks, feedback</h4>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-pass-sms">Ожидайте пароль в SMS</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-request">Ваша заявка принята</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-follow">Спасибо за подписку</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-comment">Спасибо за отзыв</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-faq">Вопрос принят на обработку</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-changes">Изменения успешно внесены</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-pass-changed">Пароль успешно изменен</button>
+          <button class="btn btn--primary" data-fancybox data-src="#feedback-mail">Сообщение отправлено</button>
+        </section>
+      </div>
+      
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer-main container flexible">
+          <div class="footer-follow">
+            <div class="footer-follow__inner">
+              <div class="subscribe"><b>Подписка на рассылку</b>
+                <p>Подпишитесь и получайте новости об акциях и специальных предложениях</p>
+                <form class="form-subscribe" method="post" action="#">
+                  <input type="email" placeholder="Введите ваш e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
+                  <button type="submit"></button>
+                </form>
+              </div>
+              <div class="social no-mob"><b>Присоединяйтесь</b>
+                <ul class="list-inline">
+                  <li><a href="#" title="Facebook"><span class="icon icon-facebook"></span></a></li>
+                  <li><a href="#" title="YouTube"><span class="icon icon-youtube"></span></a></li>
+                  <li><a href="#" title="Instagram"><span class="icon icon-instagram"></span></a></li>
+                  <li><a href="#" title="Telegram"><span class="icon icon-telegram"></span></a></li>
+                  <li><a href="#" title="Viber"><span class="icon icon-viber"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-extra tablet-only">
+              <div class="footer-extra__copyrights">
+                <p>&copy; Интернет-магазин «AutoGas12»</p><a href="#">Условия использования сайта</a>
+              </div>
+              <div class="footer-extra__payment"><span class="desktop-only inline-block">Принимаем к оплате:</span>
+                <ul class="list-inline">
+                  <li><span class="icon icon-visa"></span></li>
+                  <li><span class="icon icon-mastercard"></span></li>
+                  <li><span class="icon icon-money"></span></li>
+                </ul>
+              </div>
+              <div class="footer-extra__developers"><a href="http://fulltime.com.ua/" target="_blank"><span>Создание сайта &mdash; Фултайм</span><span class="icon desktop-only inline-block"></span></a></div>
+            </div>
+          </div>
+
+          <div class="footer-nav mob-only">
+            <button class="accordion"><b>АвтоГаз12</b></button>
+            <div class="accordion-panel">
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Установка ГБО</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+              </ul>
+            </div>
+            <button class="accordion"><b>Помощь покупателю</b></button>
+            <div class="accordion-panel">
+              <ul>
+                <li><a href="#">Проблемы с заказом</a></li>
+                <li><a href="#">Часто задаваемые вопросы</a></li>
+                <li><a href="#">Условия доставки</a></li>
+                <li><a href="#">Обмен и возврат товара</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Обратная связь</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-nav flexible no-mob">
+            <div class="footer-nav__col"><b>Автогаз12</b>
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Установка ГБО</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Сотрудничество</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav__col"><b>Помощь покупателю</b>
+              <ul>
+                <li><a href="#">Проблемы с заказом</a></li>
+                <li><a href="#">Часто задаваемые вопросы</a></li>
+                <li><a href="#">Условия доставки</a></li>
+                <li><a href="#">Обмен и возврат товара</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Способы оплаты</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Обратная связь</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-contacts">
+            <div class="footer-contacts__tel"><b><span>Заказ по телефону</span></b>
+              <ul>
+                <li><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></li>
+                <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+              </ul>
+            </div>
+            <div class="footer-contacts__schedule">
+              <span>График работы call-центра</span>
+              <p>Пн-Пт с 9:00 до 18:00</p>
+              <p>Сб с 9:00 до 15:00</p>
+              <p>Вс с 10:00 до 15:00</p>
+            </div>
+            <button class="btn-callback flexible flexible--center" data-fancybox data-src="#modal-callback"><i></i><span>Хотите мы вам&nbsp;перезвоним?</span></button>
+          </div>
+
+          <div class="social mob-only"><b>Присоединяйтесь</b>
+            <ul class="list-inline">
+              <li>
+                <a href="#" title="Facebook"><span class="icon icon-facebook"></span></a>
+              </li>
+              <li>
+                <a href="#" title="YouTube"><span class="icon icon-youtube"></span></a>
+              </li>
+              <li>
+                <a href="#" title="Instagram"><span class="icon icon-instagram"></span></a>
+              </li>
+              <li>
+                <a href="#" title="Telegram"><span class="icon icon-telegram"></span></a>
+              </li>
+              <li>
+                <a href="#" title="Viber"><span class="icon icon-viber"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-extra">
+          <div class="container flexible flexible--center">
+            <div class="footer-extra__copyrights">
+              <p>&copy; Интернет-магазин «AutoGas12»</p><a href="#">Условия использования сайта</a>
+            </div>
+            <div class="footer-extra__payment"><span class="desktop-only inline-block">Принимаем к оплате:</span>
+              <ul class="list-inline">
+                <li><span class="icon icon-visa"></span></li>
+                <li><span class="icon icon-mastercard"></span></li>
+                <li><span class="icon icon-money"></span></li>
+              </ul>
+            </div>
+            <div class="footer-extra__developers"><a href="http://fulltime.com.ua/" target="_blank"><span>Создание сайта &mdash; Фултайм</span><span class="icon desktop-only inline-block"></span></a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Поиск по товарам - мобильная версия -->
+    <div class="modal search-mob modal-bg-white" id="search-mob">
+        <form class="form-search" method="post" action="#">
+            <input type="search" placeholder="Поиск по товарам">
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <!-- Каталог товаров - мобильная и планшетная версия -->
+    <div class="modal modal-catalog catalog-touch modal-bg-white" id="catalog-touch">
+        <button class="catalog-touch-close btn-close" data-fancybox-close><span class="icon-close"></span></button>
+        <div class="drilldown">
+            <div class="drilldown-container">
+                <ul class="drilldown-root catalog-list">
+                    <li class="drilldown-heading">Каталог товаров</li>
+                    <li>
+                        <span class="drilldown-item">Оборудование 4 поколения</span>
+                        <ul class="drilldown-sub">
+                            <li class="drilldown-back">
+                                <span class="drilldown-item">назад</span>
+                            </li>
+                            <li>
+                                <span class="drilldown-item">Комплекты</span>
+                                <ul class="drilldown-sub">
+                                    <li class="drilldown-back">
+                                        <span class="drilldown-item">назад</span>
+                                    </li>
+                                    <li class="last-level">
+                                        <div class="last-level__more">
+                                            <p>Комплектующие для систем впрыска</p>
+                                            <a href="#">Смотреть все</a>
+                                        </div>
+                                        <div class="last-level__menu"><span>Популярные бренды</span>
+                                            <ul>
+                                                <li><a href="#">Lovato</a></li>
+                                                <li><a href="#">STAG</a></li>
+                                                <li><a href="#">LPGTech</a></li>
+                                                <li><a href="#">KME</a></li>
+                                                <li><a href="#">Alex Optima</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="last-level__menu"><span>Часто спрашивают</span>
+                                            <ul>
+                                                <li><a href="#">Полные комплекты</a></li>
+                                                <li><a href="#">TSI, FSI, TFSI</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span class="drilldown-item">Электроника</span></li>
+                            <li><span class="drilldown-item">Редукторы</span></li>
+                            <li><span class="drilldown-item">Форсунки и жиклеры</span></li>
+                            <li><span class="drilldown-item">Комплектующие для систем впрыска</span></li>
+                        </ul>
+                    </li>
+                    <li><span class="drilldown-item">Оборудование 2 поколения</span></li>
+                    <li><span class="drilldown-item">Электроника, клапана газ&nbsp;-&nbsp;бензин</span></li>
+                    <li><span class="drilldown-item">Баллоны</span></li>
+                    <li><span class="drilldown-item">Арматура баллонов</span></li>
+                    <li><span class="drilldown-item">Ремонтные комплектующие</span></li>
+                    <li><span class="drilldown-item">Фильтры</span></li>
+                    <li><span class="drilldown-item">Тройники и хомуты</span></li>
+                    <li><span class="drilldown-item">Шланги и трубки</span></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav-short">
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="contacts-tel">
+            <p class="tel__heading">Заказ по телефону</p>
+            <p><a href="#"><b>(063) 320&ndash;12&ndash;12</b></a><span>Lifecell</span></p>
+            <ul>
+                <li><a href="#"><b>(068) 320&ndash;12&ndash;12</b></a><span>Киевстар</span></li>
+                <li><a href="#"><b>(050) 000&ndash;00&ndash;00</b></a><span>МТС</span></li>
+                <li><a href="#"><b>(057) 000&ndash;00&ndash;00</b></a><span>Городской, Харьков</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Каталог товаров - десктопная версия -->
+    <div class=" modal modal-catalog modal-catalog-desktop modal-bg-white" id="catalog-desktop">
+        <div class="modal__inner">
+            <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+
+            <div class="mob-only modal--feedback">
+                <div class="flexible flexible--center">
+                    <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M78.44 25.94v40.54c0 1.77-1.68 3.2-3.73 3.2H5.3c-2.05 0-3.73-1.43-3.73-3.2V25.94h76.88z" fill="#F7F7F7" />
+                        <path d="M78.44 13.52v12.42H1.56V13.52c0-1.77 1.68-3.2 3.73-3.2H74.7c2.05 0 3.73 1.43 3.73 3.2z" fill="#C9F3FF" />
+                        <path d="M18.2 47.7h-.15a6.2 6.2 0 1 1 0-12.39h.15a6.2 6.2 0 1 1 0 12.4z" fill="#FFC954" />
+                        <path d="M40.08 47.7h-.16a6.2 6.2 0 1 1 0-12.39h.16a6.2 6.2 0 1 1 0 12.4z" fill="#F9B" />
+                        <path d="M61.95 47.7h-.15a6.2 6.2 0 1 1 0-12.39h.15a6.2 6.2 0 1 1 0 12.4z" fill="#7DF5A5" />
+                        <path d="M74.71 8.75H5.3C2.37 8.75 0 10.89 0 13.52v52.96c0 2.63 2.37 4.77 5.29 4.77H74.7c2.92 0 5.29-2.14 5.29-4.77V13.52c0-2.63-2.37-4.77-5.29-4.77zm0 59.38H5.3c-1.17 0-2.17-.76-2.17-1.65V27.5h59.7a1.56 1.56 0 1 0 0-3.13H3.11V13.53c0-.9 1-1.64 2.17-1.64H74.7c1.17 0 2.17.75 2.17 1.64v10.86H75.3a1.56 1.56 0 1 0 0 3.12h1.56v38.98c0 .9-.99 1.64-2.16 1.64z" fill="#000" />
+                        <path d="M70.4 16.61H29.83a1.56 1.56 0 1 0 0 3.13H70.4a1.56 1.56 0 1 0 0-3.13zM10.87 17.58a1.6 1.6 0 0 0-.58-.7 1.6 1.6 0 0 0-.56-.23 1.54 1.54 0 0 0-1.17.23 1.49 1.49 0 0 0-.58.7 1.55 1.55 0 0 0 .34 1.7 1.46 1.46 0 0 0 .5.34 1.56 1.56 0 0 0 2.05-2.04zM17.12 17.58a1.6 1.6 0 0 0-.34-.5 1.57 1.57 0 0 0-2.4.23 1.6 1.6 0 0 0-.23 1.17 1.6 1.6 0 0 0 .66 1 1.5 1.5 0 0 0 .87.26 1.58 1.58 0 0 0 1.1-.46 1.73 1.73 0 0 0 .34-.5 1.66 1.66 0 0 0 .12-.6 1.55 1.55 0 0 0-.12-.6zM23.37 17.58a1.64 1.64 0 0 0-.34-.5 1.48 1.48 0 0 0-.5-.35l-.3-.08a1.54 1.54 0 0 0-1.17.23 1.49 1.49 0 0 0-.58.7 1.54 1.54 0 0 0 .15 1.46 1.48 1.48 0 0 0 .43.44 1.5 1.5 0 0 0 .87.26 1.58 1.58 0 0 0 .86-.26 1.55 1.55 0 0 0 .67-1.6 1.7 1.7 0 0 0-.09-.3zM70.56 25.37a1.58 1.58 0 0 0-1.14-.94 1.58 1.58 0 0 0-1.75.94 1.59 1.59 0 0 0 0 1.2 1.6 1.6 0 0 0 .58.7 1.54 1.54 0 0 0 1.17.23 1.6 1.6 0 0 0 .8-.43 1.53 1.53 0 0 0 .46-1.1 1.57 1.57 0 0 0-.12-.6zM24.22 52.5H11.8a1.56 1.56 0 1 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM24.22 58.75H11.8a1.56 1.56 0 1 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM46.15 52.5H33.72a1.56 1.56 0 0 0 0 3.13h12.43a1.56 1.56 0 1 0 0-3.13zM46.15 58.75H33.72a1.56 1.56 0 0 0 0 3.13h12.43a1.56 1.56 0 1 0 0-3.13zM68.02 52.5H55.6a1.56 1.56 0 0 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM68.02 58.75H55.6a1.56 1.56 0 0 0 0 3.13h12.42a1.56 1.56 0 1 0 0-3.13zM18.2 33.75h-.15a7.77 7.77 0 0 0 0 15.52h.15a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.15a4.64 4.64 0 0 1 0-9.27h.15a4.64 4.64 0 0 1 0 9.27zM40.08 33.75h-.16a7.77 7.77 0 0 0 0 15.52h.16a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.16a4.64 4.64 0 0 1 0-9.27h.16a4.64 4.64 0 0 1 0 9.27zM61.95 33.75h-.15a7.77 7.77 0 0 0 0 15.52h.15a7.77 7.77 0 0 0 0-15.52zm0 12.4h-.15a4.64 4.64 0 0 1 0-9.27h.15a4.64 4.64 0 0 1 0 9.27z" fill="#000" />
+                    </svg>
+                    <b>Ничего не сломалось, но...</b>
+                    <p>Увеличьте ширину браузера или откройте каталог заново :)</p>
+                </div>
+            </div>
+
+            <div class="tabs flexible no-mob">
+                <ul class="tabs-list">
+                    <li class="active" data-tab="catalog-tab-1">Оборудование 4 поколения</li>
+                    <li data-tab="catalog-tab-2">Оборудование 2 поколения</li>
+                    <li data-tab="catalog-tab-3">Электроника, клапана газ&nbsp;-&nbsp;бензин</li>
+                    <li data-tab="catalog-tab-4">Баллоны</li>
+                    <li data-tab="catalog-tab-5">Арматура баллонов</li>
+                    <li data-tab="catalog-tab-6">Ремонтные комплектующие</li>
+                    <li data-tab="catalog-tab-7">Фильтры</li>
+                    <li data-tab="catalog-tab-8">Тройники и хомуты</li>
+                    <li data-tab="catalog-tab-9">Шланги и трубки</li>
+                </ul>
+
+                <div class="tab-content current" id="catalog-tab-1">
+                    <div class="flexible">
+                        <div class="last-level">
+                            <a href="#">Комплекты</a>
+                            <div class="last-level__menu">
+                                <span>Популярные бренды</span>
+                                <ul>
+                                    <li><a href="#">Lovato</a></li>
+                                    <li><a href="#">STAG</a></li>
+                                    <li><a href="#">LPGTech</a></li>
+                                    <li><a href="#">KME</a></li>
+                                    <li><a href="#">Alex Optima</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__menu">
+                                <span>Часто спрашивают</span>
+                                <ul>
+                                    <li><a href="#">Полные комплекты</a></li>
+                                    <li><a href="#">TSI, FSI, TFSI</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__more">
+                                <a href="#">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="last-level">
+                            <a href="#">Электроника</a>
+                            <div class="last-level__menu">
+                                <span>Популярные бренды</span>
+                                <ul>
+                                    <li><a href="#">Lovato</a></li>
+                                    <li><a href="#">STAG</a></li>
+                                    <li><a href="#">LPGTech</a></li>
+                                    <li><a href="#">KME</a></li>
+                                    <li><a href="#">Alex Optima</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__more">
+                                <a href="#">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="last-level">
+                            <a href="#">Редукторы</a>
+                            <div class="last-level__menu">
+                                <span>Популярные бренды</span>
+                                <ul>
+                                    <li><a href="#">Lovato</a></li>
+                                    <li><a href="#">STAG</a></li>
+                                    <li><a href="#">LPGTech</a></li>
+                                    <li><a href="#">KME</a></li>
+                                    <li><a href="#">Alex Optima</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__more">
+                                <a href="#">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="last-level">
+                            <a href="#">Форсунки и жиклеры</a>
+                            <div class="last-level__menu">
+                                <span>Популярные бренды</span>
+                                <ul>
+                                    <li><a href="#">Lovato</a></li>
+                                    <li><a href="#">STAG</a></li>
+                                    <li><a href="#">LPGTech</a></li>
+                                    <li><a href="#">KME</a></li>
+                                    <li><a href="#">Alex Optima</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__more">
+                                <a href="#">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="last-level">
+                            <a href="#">Комплектующие для систем впрыска</a>
+                            <div class="last-level__menu">
+                                <ul>
+                                    <li><a href="#">Блоки управления и проводка</a></li>
+                                    <li><a href="#">Датчики температуры, давления и вакуума</a></li>
+                                    <li><a href="#">Датчики уровня газа</a></li>
+                                    <li><a href="#">Интерфейсы</a></li>
+                                    <li><a href="#">Переключатели и зуммеры</a></li>
+                                </ul>
+                            </div>
+                            <div class="last-level__more">
+                                <a href="#">Смотреть все</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="catalog-tab-2">
+                    <h3>I'm tab <strong>2</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-3">
+                    <h3>I'm tab <strong>3</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-4">
+                    <h3>I'm tab <strong>4</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-5">
+                    <h3>I'm tab <strong>5</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-6">
+                    <h3>I'm tab <strong>6</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-7">
+                    <h3>I'm tab <strong>7</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-8">
+                    <h3>I'm tab <strong>8</strong></h3>
+                </div>
+                <div class="tab-content" id="catalog-tab-9">
+                    <h3>I'm tab <strong>9</strong></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Восстановление пароля -->
+    <div class="modal modal--sm modal--form modal--pass-recovery" id="modal-pass-recovery">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Восстановление пароля</b></header>
+      <div class="modal__content">
+        <form class="form-pass-recovery" method="post" action="">
+          <div class="field-box">
+            <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+            <span class="error-element"></span>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить пароль по SMS</button>
+        </form>
+        <footer>
+          <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-sign-in">Я вспомнил пароль</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Вход в личный кабинет -->
+    <div class="modal modal--lg modal--form modal-sign-in" id="modal-sign-in">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Вход в личный кабинет</b></header>
+      <div class="modal__content">
+        <p class="no-mob">Если вы когда-нибудь у нас покупали — у вас точно есть аккаунт и он привязан к номеру, вашего мобильного телефона.</p>
+        <form class="form-sign-in" action="" method="post">
+          <div class="flexible">
+            <div class="field-box">
+              <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+              <span class="error-element"></span>
+            </div>
+            <div class="field-box">
+              <input class="form-control" type="password" name="password" placeholder="Пароль">
+              <span class="switch-type"></span>
+            </div>
+          </div>
+          <footer class="flexible">
+            <button class="btn btn--secondary" type="submit">Войти</button>
+            <div class="flexible">
+              <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-pass-recovery">Забыли пароль?</span>
+              <hr class="mob-only">
+              <a class="color--link dashed" href="#"><b>У меня еще нет аккаунта</b></a>
+            </div>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <!-- Вход в личный кабинет (Неверный логин или пароль) -->
+    <div class="modal modal--lg modal--form modal-sign-in" id="modal-sign-in-error">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Вход в личный кабинет</b></header>
+      <div class="modal__content">
+        <p class="no-mob">Если вы когда-нибудь у нас покупали — у вас точно есть аккаунт и он привязан к номеру, вашего мобильного телефона.</p>
+
+        <p class="auth-error">Неверный логин или пароль</p>
+
+        <form class="form-sign-in" action="" method="post">
+          <div class="flexible">
+            <div class="field-box">
+              <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+              <span class="error-element"></span>
+            </div>
+            <div class="field-box">
+              <input class="form-control" type="password" name="password" placeholder="Пароль">
+              <span class="switch-type"></span>
+            </div>
+          </div>
+          <footer class="flexible">
+            <button class="btn btn--secondary" type="submit">Войти</button>
+            <div class="flexible">
+              <span class="popup-toggle color--link dashed" onclick="$.fancybox.close();" data-fancybox data-src="#modal-pass-recovery">Забыли пароль?</span>
+              <hr class="mob-only">
+              <a class="color--link dashed" href="#"><b>У меня еще нет аккаунта</b></a>
+            </div>
+          </footer>
+        </form>
+      </div>
+    </div>
+
+    <!-- Обратный звонок -->
+    <div class="modal modal--sm modal--form" id="modal-callback">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Обратный звонок</b></header>
+      <div class="modal__content">
+        <form class="form-callback" method="post" action="">
+          <div class="field-box">
+            <input class="form-control" type="text" name="name" placeholder="Ваше имя">
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control tel-mask" type="tel" name="tel" placeholder="+38 (___) ___-__-__">
+            <span class="error-element"></span>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить запрос</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Обратная связь -->
+    <div class="modal modal--md modal--form" id="modal-feedback">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Обратная связь</b></header>
+      <div class="modal__content">
+        <form class="form-feedback" method="post" action="">
+          <div class="field-box">
+            <textarea class="form-control" name="message" placeholder="Текст сообщения"></textarea>
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="email" name="email" placeholder="E-mail">
+            <span class="error-element"></span>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Проблемы с заказом -->
+    <div class="modal modal--md modal--form" id="modal-issue">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Проблемы с заказом</b></header>
+      <div class="modal__content">
+        <form class="form-issue" method="post" action="">
+          <div class="field-box">
+            <input class="form-control" type="text" name="number" placeholder="Номер заказа">
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <textarea class="form-control" name="message" placeholder="Текст сообщения"></textarea>
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="email" name="email" placeholder="E-mail">
+            <span class="error-element"></span>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Информативное, доставка -->
+    <div class="modal modal--lg modal--info" id="modal-delivery">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Доставка</b></header>
+      <div class="modal__content">
+        <div class="delivery delivery-modal">
+          <div class="delivery__heading flexible">
+            <div><img src="images/novaya-pochta.jpg" alt=""></div>
+            <div>
+              <h2>Новая Почта</h2>
+              <a href="#">Адреса отделений Новой Почты</a>
+            </div>
+          </div>
+          <p>С помощью доставки Новой Почтой, Вы можете получить товар во всех регионах Украины, даже в самых отдаленных местах.</p>
+          <p>В среднем, доставка занимает 1-3 дня, во время заказа наши менеджеры согласуют с Вами дату доставки перед отправкой товара.</p>
+          <p><strong>ВНИМАНИЕ!</strong> Заказ хранится в отделении Новой Почты не более 5 рабочих дней, после чего отправляется обратно! Получить заказ может только человек, указанный в транспортной декларации как получатель. При себе необходимо обязательно иметь удостоверение личности!</p>
+        </div>
+        <div class="delivery delivery-modal">
+          <div class="delivery__heading flexible">
+            <div><img src="images/intaim.jpg" alt=""></div>
+            <div>
+              <h2>Интайм</h2>
+              <a href="#">Адреса отделений Новой Почты</a>
+            </div>
+          </div>
+          <p>С помощью доставки Новой Почтой, Вы можете получить товар во всех регионах Украины, даже в самых отдаленных местах.</p>
+          <p>В среднем, доставка занимает 1-3 дня, во время заказа наши менеджеры согласуют с Вами дату доставки перед отправкой товара.</p>
+          <p><strong>ВНИМАНИЕ!</strong> Заказ хранится в отделении Новой Почты не более 5 рабочих дней, после чего отправляется обратно! Получить заказ может только человек, указанный в транспортной декларации как получатель. При себе необходимо обязательно иметь удостоверение личности!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Напишите свой вопрос -->
+    <div class="modal modal--md modal--form" id="modal-question">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Напишите свой вопрос</b></header>
+      <div class="modal__content">
+        <form class="form-question" method="post" action="">
+          <div class="field-box">
+            <textarea class="form-control" name="question" placeholder="Текст вопроса"></textarea>
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+            <span class="error-element"></span>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="email" name="email" placeholder="E-mail">
+            <span class="error-element"></span>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить вопрос</button>
+        </form>
+        <p class="form-importantly">Важно! Чтобы Ваш вопрос либо комментарий прошел модерацию и был опубликован, ознакомьтесь, пожалуйста, с <a href="#">нашими правилами</a></p>
+      </div>
+    </div>
+
+    <!-- Оцените товар -->
+    <div class="modal modal--md modal--form" id="modal-evaluation">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <header class="modal__header flexible"><b>Оцените товар</b></header>
+      <div class="modal__content">
+        <form class="form-evaluation" method="post" action="">
+          <div class="star-rating">
+            <div class="star-rating__wrap">
+              <input class="star-rating__input" id="modal-star-rating-5" type="radio" name="rating" value="5">
+              <label class="star-rating__ico custom" for="modal-star-rating-5" title="Товар отличный"></label>
+              <input class="star-rating__input" id="modal-star-rating-4" type="radio" name="rating" value="4">
+              <label class="star-rating__ico custom" for="modal-star-rating-4" title="Товар хороший"></label>
+              <input class="star-rating__input" id="modal-star-rating-3" type="radio" name="rating" value="3">
+              <label class="star-rating__ico custom" for="modal-star-rating-3" title="Товар нормальный"></label>
+              <input class="star-rating__input" id="modal-star-rating-2" type="radio" name="rating" value="2">
+              <label class="star-rating__ico custom" for="modal-star-rating-2" title="Товар так себе"></label>
+              <input class="star-rating__input" id="modal-star-rating-1" type="radio" name="rating" value="1">
+              <label class="star-rating__ico custom" for="modal-star-rating-1" title="Товар плохой"></label>
+            </div>
+
+            <div class="star-rating__text"></div>
+          </div>
+
+          <div class="field-box">
+            <textarea class="form-control" name="advantages" placeholder="Достоинства"></textarea>
+          </div>
+          <div class="field-box">
+            <textarea class="form-control" name="disadvantages" placeholder="Недостатки"></textarea>
+          </div>
+          <div class="field-box">
+            <textarea class="form-control" name="comment" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+          </div>
+          <div class="field-box">
+            <input class="form-control" type="email" name="email" placeholder="E-mail">
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить вопрос</button>
+        </form>
+        <p class="form-importantly">Важно! Чтобы Ваш вопрос либо комментарий прошел модерацию и был опубликован, ознакомьтесь, пожалуйста, с <a href="#">нашими правилами</a></p>
+      </div>
+    </div>
+
+    <!-- feedback - восстановление пароля -->
+    <div class="modal modal--xs modal--feedback" id="feedback-pass-sms">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M77.87 2.97L46.9 47.67l-3.23 4.66v15.65l11.77-11.5-6.01-11.22" fill="#F5C86E"/>
+          <path d="M32.74 48.99L10 42.03 78.44 1.56v61.4L44.22 52.5" fill="#FAE196"/>
+          <path d="M43.67 67.98l-10.33-18.8L77.86 2.96 44.63 50.95l-.96 17.03z" fill="#F5B955"/>
+          <path d="M79.21.2a1.56 1.56 0 0 0-1.57.02L49.01 17.15a1.56 1.56 0 1 0 1.59 2.69L71.14 7.69 32.88 47.4l-19.04-5.82L38.68 26.9a1.56 1.56 0 0 0-1.59-2.7L9.2 40.7a1.56 1.56 0 0 0 .34 2.84l22.73 6.95L42.3 68.73l.03.05a1.56 1.56 0 0 0 2.43.32L56.3 57.83 78 64.46a1.56 1.56 0 0 0 2.01-1.5V1.57C80 1 79.7.48 79.21.21zM65.56 18L42.39 51.44c-.19.26-.28.57-.28.9v9.55l-6.85-12.46 30.3-31.44zM45.23 64.27v-9.83l7.66 2.35-7.66 7.48zm.94-12.8l30.7-44.33v53.72l-30.7-9.4z" fill="#000"/>
+          <path d="M25.7 54.3a1.56 1.56 0 0 0-2.22 0L8.9 68.9a1.56 1.56 0 0 0 2.2 2.2l14.6-14.58c.6-.61.6-1.6 0-2.21zM4.05 73.74l-3.6 3.6a1.56 1.56 0 0 0 2.22 2.2l3.6-3.6a1.56 1.56 0 0 0-2.22-2.2zM21.18 76.78a1.57 1.57 0 0 0-1.56 1.57 1.57 1.57 0 0 0 1.56 1.56 1.57 1.57 0 0 0 1.57-1.56 1.57 1.57 0 0 0-1.57-1.57zM31.7 65.62l-7.72 7.72a1.56 1.56 0 0 0 2.2 2.21l7.73-7.73a1.56 1.56 0 0 0-2.2-2.2zM58.37 65.02l-7.75 7.75a1.56 1.56 0 0 0 2.21 2.2l7.75-7.74a1.56 1.56 0 0 0-2.21-2.2zM43.2 23.97a1.57 1.57 0 0 0 1.1-2.67 1.57 1.57 0 0 0-2.21 0c-.3.29-.46.7-.46 1.1a1.57 1.57 0 0 0 1.56 1.57z" fill="#000"/>
+        </svg>
+        <b>Ожидайте пароль в SMS</b>
+        <p>Теперь с новым паролем вы можете <span class="popup-toggle color--link" onclick="$.fancybox.close();" data-fancybox data-src="#modal-sign-in">войти в ваш кабинет</span></p>
+      </div>
+    </div>
+
+    <!-- feedback - заявка принята -->
+    <div class="modal modal--xs modal--feedback" id="feedback-request">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M57.22 56.6l1.67-1.66a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46a2.94 2.94 0 0 1-4.16 0l-4.98-4.98a2.94 2.94 0 0 1 0-4.16l.46-.45a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67a11.6 11.6 0 0 0 0 16.41L40.8 56.6a11.6 11.6 0 0 0 16.42 0z" fill="#FF5D5D"/>
+          <path d="M36.1 35.92c.01-.73.3-1.45.85-2l.46-.46a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67-.22.23L36.1 35.92zM58.89 49.56l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46c-.56.55-1.28.84-2.01.85l12.91 12.92.23-.22 1.67-1.66a3.8 3.8 0 0 0 0-5.38z" fill="#fff"/>
+          <path d="M57.22 56.6l1.67-1.66a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46a2.94 2.94 0 0 1-4.16 0l-4.98-4.98a2.94 2.94 0 0 1 0-4.16l.46-.45a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67a11.6 11.6 0 0 0 0 16.41L40.8 56.6a11.6 11.6 0 0 0 16.42 0z" fill="#FF5D5D"/>
+          <path d="M36.1 35.92c.01-.73.3-1.45.85-2l.46-.46a3.8 3.8 0 0 0 0-5.38l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-1.66 1.67-.22.23L36.1 35.92zM58.89 49.56l-6.97-6.97a3.8 3.8 0 0 0-5.38 0l-.45.46c-.56.55-1.28.84-2.01.85l12.91 12.92.23-.22 1.67-1.66a3.8 3.8 0 0 0 0-5.38z" fill="#fff"/>
+          <path d="M8.13 40.16V40H1.55a38.44 38.44 0 0 1 65.62-27.18L70 10V21H58.98l3.56-3.55A31.87 31.87 0 0 0 8.86 33.2l-.73 6.96zM71.87 39.84V40h6.57a38.44 38.44 0 0 1-65.62 27.18L10 70V59h11.02l-3.56 3.55a31.87 31.87 0 0 0 53.68-15.73l.73-6.97z" fill="#B3D0FF"/>
+          <path d="M38.51 34.56a5.33 5.33 0 0 0 0-7.59l-6.96-6.96a5.33 5.33 0 0 0-7.59 0l-1.67 1.67a13.08 13.08 0 0 0-3.85 9.3c0 3.52 1.37 6.83 3.85 9.32L39.7 57.7a13.13 13.13 0 0 0 9.31 3.86c3.38 0 6.75-1.29 9.31-3.85L60 56.04a5.33 5.33 0 0 0 0-7.59l-6.96-6.96a5.33 5.33 0 0 0-7.6 0l-.45.45a1.37 1.37 0 0 1-1.94 0l-4.98-4.98a1.37 1.37 0 0 1 0-1.94l.45-.46zm2.32 9.6a4.47 4.47 0 0 0 6.36 0l.46-.46a2.23 2.23 0 0 1 3.17 0l6.96 6.96a2.23 2.23 0 0 1 0 3.17l-.77.78-6.17-6.17a1.56 1.56 0 0 0-2.21 2.2l6.04 6.05a9.97 9.97 0 0 1-5.66 1.75 9.97 9.97 0 0 1-7.1-2.94l-17.4-17.41a9.98 9.98 0 0 1-2.95-7.1c0-2.69 1.05-5.2 2.94-7.1l1.67-1.67a2.23 2.23 0 0 1 3.17 0l6.96 6.96a2.23 2.23 0 0 1 0 3.17l-.45.46-.3.33-5.31-5.3a1.56 1.56 0 0 0-2.21 2.2l6.54 6.55c.13.98.57 1.87 1.28 2.58l4.98 4.98z" fill="#000"/>
+          <path d="M66.07 13.92c.61.61 1.6.61 2.21 0l.16-.15v5.68h-5.68l.88-.89a1.56 1.56 0 0 0 0-2.2A33.22 33.22 0 0 0 40 6.55a33.22 33.22 0 0 0-23.64 9.8 33.32 33.32 0 0 0-9.03 16.5 1.56 1.56 0 1 0 3.05.67A30.35 30.35 0 0 1 60.3 17.49l-2.42 2.42a1.56 1.56 0 0 0 1.1 2.67H70c.86 0 1.56-.7 1.56-1.57V10a1.56 1.56 0 0 0-2.66-1.1l-1.74 1.73A39.72 39.72 0 0 0 40 0a39.74 39.74 0 0 0-28.28 11.72A39.74 39.74 0 0 0 0 40a1.56 1.56 0 0 0 3.13 0c0-9.85 3.83-19.11 10.8-26.07a36.92 36.92 0 0 1 52.14 0z" fill="#000"/>
+          <path d="M9.69 40.15V40a1.56 1.56 0 0 0-3.13 0v.16a1.56 1.56 0 1 0 3.13 0zM78.44 38.44c-.87 0-1.56.7-1.56 1.56 0 9.85-3.84 19.11-10.8 26.07a36.92 36.92 0 0 1-52.15 0 1.56 1.56 0 0 0-2.21 0l-.16.16v-5.68h5.68l-.88.89a1.56 1.56 0 0 0 0 2.2A33.22 33.22 0 0 0 40 73.45c8.93 0 17.33-3.48 23.64-9.8a33.32 33.32 0 0 0 9.03-16.5 1.56 1.56 0 1 0-3.05-.67A30.35 30.35 0 0 1 19.7 62.51l2.42-2.42a1.56 1.56 0 0 0-1.1-2.67H10c-.86 0-1.56.7-1.56 1.57V70a1.56 1.56 0 0 0 2.66 1.1l1.74-1.73A39.72 39.72 0 0 0 40 80a39.74 39.74 0 0 0 28.28-11.72A39.74 39.74 0 0 0 80 40c0-.86-.7-1.56-1.56-1.56z" fill="#000"/>
+          <path d="M70.31 39.85V40a1.56 1.56 0 0 0 3.13 0v-.16a1.56 1.56 0 1 0-3.13 0z" fill="#000"/>
+        </svg>
+        <b>Ваша заявка принята</b>
+        <p>Наше менеджер свяжется с вами в ближайшее время</p>
+      </div>
+    </div>
+
+    <!-- feedback - подписка -->
+    <div class="modal modal--xs modal--feedback" id="feedback-follow">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.56 28.43V72.2c0 3.45 2.8 6.25 6.25 6.25H72.2c3.45 0 6.25-2.8 6.25-6.25V28.43L43.86 2.85a6.49 6.49 0 0 0-7.72 0L1.56 28.43z" fill="#fff"/>
+          <path d="M51.32 55.55H28.68L1.56 28.43V72.2c0 3.45 2.8 6.25 6.25 6.25H72.2c3.45 0 6.25-2.8 6.25-6.25V28.43L51.32 55.55z" fill="#FE8F8D"/>
+          <path d="M47.96 52.19a11.26 11.26 0 0 0-15.92 0l-26 26c.57.16 1.16.25 1.77.25H72.2c.61 0 1.2-.1 1.76-.26l-25.99-26z" fill="#FF5D5D"/>
+          <path d="M46.47 71.56A1.57 1.57 0 0 0 48.03 70a1.57 1.57 0 0 0-1.56-1.56A1.57 1.57 0 0 0 44.91 70a1.57 1.57 0 0 0 1.56 1.56zM48.72 41.56H40c-7.4 0-13.42-6.02-13.42-13.42v-.19c0-7.4 6.02-13.42 13.42-13.42s13.42 6.02 13.42 13.42v2.88a4.98 4.98 0 0 1-9.95 0v-3.25c0-2.2-1.8-4-4-4a4.37 4.37 0 0 0 0 8.73h2.23a1.56 1.56 0 0 1 0 3.12h-2.23a7.5 7.5 0 0 1 0-14.98c3.93 0 7.13 3.2 7.13 7.13v3.25a1.85 1.85 0 0 0 3.7 0v-2.88a10.3 10.3 0 0 0-20.6 0v.19A10.3 10.3 0 0 0 40 38.44h8.72a1.56 1.56 0 0 1 0 3.12zM70.94 60.64a1.57 1.57 0 0 1-1.56-1.57 1.57 1.57 0 0 1 1.56-1.56 1.57 1.57 0 0 1 1.56 1.56 1.57 1.57 0 0 1-1.56 1.57z" fill="#000"/>
+          <path d="M79.37 27.17L44.79 1.6a8 8 0 0 0-9.58 0L.63 27.17c-.4.3-.63.77-.63 1.26V72.2C0 76.49 3.5 80 7.81 80H72.2c4.3 0 7.81-3.5 7.81-7.81V28.43c0-.5-.23-.96-.63-1.26zM37.07 4.1a4.9 4.9 0 0 1 5.86 0l33.12 24.5-24.73 24.74-2.25-2.26c-5-5-13.14-5-18.14 0l-2.25 2.26L3.95 28.6 37.07 4.1zM5.77 76.24l-.1.12a4.7 4.7 0 0 1-2.54-4.17V32.2l23.34 23.35-20.7 20.69zm3.8.63l5.3-5.3h25.6a1.56 1.56 0 0 0 0-3.13H18l4.37-4.38h11.56a1.56 1.56 0 0 0 0-3.12H25.5l4.28-4.29 3.36-3.36a9.71 9.71 0 0 1 13.72 0l3.36 3.36 20.22 20.22H9.56zm67.3-4.68a4.7 4.7 0 0 1-2.54 4.17 1.61 1.61 0 0 0-.1-.12l-20.7-20.7L69.37 39.7v12.98a1.56 1.56 0 1 0 3.13 0v-16.1l4.38-4.38V72.2z" fill="#000"/>
+        </svg>
+        <b>Спасибо за подписку!</b>
+        <p>Вы будете первым узнавать об акциях и специальных предложениях</p>
+      </div>
+    </div>
+
+    <!-- feedback - отзыв, комментарий -->
+    <div class="modal modal--xs modal--feedback" id="feedback-comment">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.63 46.74v-5.6a3.52 3.52 0 0 0-3.52-3.51H1.56v40.52h21.55a3.52 3.52 0 0 0 3.52-3.52V46.74z" fill="#FF5A5A"/>
+          <path d="M73.37 48.04h-4.06a5.07 5.07 0 0 0 0-10.13H49.74l2.97-8.81a8.98 8.98 0 0 0-5.9-11.46l-2.74-.83-4.3 11.9a16.25 16.25 0 0 1-7.52 8.75l-5.73 3.12.1 34.88 3.65 1.43a22.46 22.46 0 0 0 8.2 1.55h27.31a5.07 5.07 0 0 0 0-10.13h3.93a5.07 5.07 0 1 0 0-10.13h3.66a5.07 5.07 0 1 0 0-10.14z" fill="#FFCDAC"/>
+          <path d="M17.06 72.12a2.81 2.81 0 1 0 0-5.63 2.81 2.81 0 0 0 0 5.63z" fill="#fff"/>
+          <path d="M26.63 51.23a1.57 1.57 0 0 0-1.57 1.56 1.57 1.57 0 0 0 1.57 1.57 1.57 1.57 0 0 0 1.1-2.67c-.29-.3-.7-.46-1.1-.46z" fill="#000"/>
+          <path d="M80 53.11c0-3.16-2.22-5.8-5.18-6.47a6.64 6.64 0 0 0-5.52-10.3H51.93l2.27-6.74c.92-2.73.7-5.64-.61-8.2a10.46 10.46 0 0 0-6.31-5.25l-2.74-.84c-.8-.24-1.64.18-1.93.97l-4.3 11.9a14.68 14.68 0 0 1-6.8 7.9l-4.3 2.35a5.08 5.08 0 0 0-4.1-2.08H1.57c-.86 0-1.56.7-1.56 1.56v40.53C0 79.3.7 80 1.56 80h21.55c1.87 0 3.5-1.02 4.39-2.52l2.2.86c2.8 1.1 5.76 1.66 8.77 1.66h27.3a6.64 6.64 0 0 0 5.5-10.32 6.64 6.64 0 0 0 3.9-10.2A6.64 6.64 0 0 0 80 53.12zm-6.63 3.5H57.3a1.56 1.56 0 0 0 0 3.13h12.41a3.5 3.5 0 0 1 0 7H57.3a1.56 1.56 0 0 0 0 3.13h8.47a3.5 3.5 0 0 1 0 7h-27.3c-2.62 0-5.19-.48-7.63-1.44L28.2 74.4V59.06a1.56 1.56 0 0 0-3.13 0v15.86c0 1.08-.87 1.95-1.95 1.95H3.13v-37.4H23.1c1.08 0 1.95.88 1.95 1.96v5.3a1.56 1.56 0 0 0 3.13 0v-5.28L33 38.83a17.8 17.8 0 0 0 8.23-9.59l3.8-10.5 1.33.4a7.36 7.36 0 0 1 4.44 3.7 7.36 7.36 0 0 1 .43 5.76l-2.97 8.81a1.56 1.56 0 0 0 1.48 2.07h19.57a3.5 3.5 0 0 1 0 7h-12a1.56 1.56 0 0 0 0 3.13h16.06a3.5 3.5 0 0 1 0 7z" fill="#000"/>
+          <path d="M17.06 64.93a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 5.62a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM46.69 3.13a1.57 1.57 0 0 0 1.56-1.57A1.57 1.57 0 0 0 46.7 0a1.57 1.57 0 0 0-1.56 1.56 1.57 1.57 0 0 0 1.56 1.56zM46.7 5.83c-.87 0-1.57.7-1.57 1.57v3.8a1.56 1.56 0 0 0 3.12 0V7.4c0-.87-.7-1.57-1.56-1.57zM56 22.07c0 .87.7 1.57 1.56 1.57h9.64a1.56 1.56 0 0 0 0-3.13h-9.64c-.86 0-1.56.7-1.56 1.56zM26.18 23.63h9.64a1.56 1.56 0 0 0 0-3.12h-9.64a1.56 1.56 0 0 0 0 3.12zM36.75 14.34a1.56 1.56 0 0 0 2.21 0c.61-.61.61-1.6 0-2.21l-4.55-4.55a1.56 1.56 0 0 0-2.2 2.21l4.54 4.55zM55.52 14.8c.4 0 .8-.15 1.1-.46l4.56-4.55a1.56 1.56 0 0 0-2.21-2.2l-4.55 4.54a1.56 1.56 0 0 0 1.1 2.67z" fill="#000"/>
+        </svg>
+        <b>Спасибо за отзыв!</b>
+        <p><span>[name]</span>, ваше мнение очень важно для нас. Это помогает нам становиться лучше :)</p>
+      </div>
+    </div>
+
+    <!-- feedback - вопрос принят -->
+    <div class="modal modal--xs modal--feedback" id="feedback-faq">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="73" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.59 14.68h42.6c5.53 0 10.01 4.48 10.01 10v27.83c0 5.53-4.48 10.01-10.02 10.01H29.75v8.92l-8.98-8.92H11.6a10.02 10.02 0 0 1-10.02-10V24.67c0-5.52 4.48-10 10.02-10z" fill="#FFF0AA"/>
+          <path d="M68.41 1.56h-42.6A10.01 10.01 0 0 0 15.8 11.57v26.27c0 5.53 4.48 10 10.02 10h24.43v8.92l8.98-8.91h9.18c5.54 0 10.02-4.48 10.02-10V11.56c0-5.53-4.48-10-10.02-10z" fill="#91E696"/>
+          <path d="M68.41 0H52.86a1.56 1.56 0 1 0 0 3.13H68.4a8.46 8.46 0 0 1 8.46 8.44v26.27c0 4.66-3.8 8.45-8.46 8.45h-9.18c-.41 0-.81.16-1.1.45l-6.32 6.27v-5.16c0-.86-.7-1.56-1.56-1.56H25.82a8.46 8.46 0 0 1-8.46-8.45V11.57c0-4.65 3.8-8.44 8.46-8.44h14.93a1.56 1.56 0 1 0 0-3.13H25.82a11.6 11.6 0 0 0-11.59 11.57v1.54h-2.64A11.6 11.6 0 0 0 0 24.68v27.84a11.6 11.6 0 0 0 11.59 11.57h8.53l8.53 8.46a1.57 1.57 0 0 0 2.67-1.11v-7.35h22.86a11.6 11.6 0 0 0 11.59-11.57v-3.1h2.64A11.6 11.6 0 0 0 80 37.83V11.57A11.6 11.6 0 0 0 68.41 0zm-5.77 52.52c0 4.65-3.8 8.44-8.46 8.44H29.75c-.86 0-1.56.7-1.56 1.56v5.16l-6.32-6.27c-.29-.29-.69-.45-1.1-.45h-9.18a8.5 8.5 0 0 1-.94-.05V51.6a1.57 1.57 0 0 0-3.13 0v8.31a8.45 8.45 0 0 1-4.39-7.4V24.69c0-4.65 3.8-8.44 8.46-8.44h2.64v21.6a11.6 11.6 0 0 0 11.59 11.57h22.86v7.35a1.56 1.56 0 0 0 2.67 1.11l8.53-8.46h2.76v3.1z" fill="#000"/>
+          <path d="M47.11 3.13a1.57 1.57 0 0 0 1.57-1.57A1.57 1.57 0 0 0 47.11 0a1.58 1.58 0 0 0-1.56 1.56 1.57 1.57 0 0 0 1.56 1.57zM37.37 34.88a1.56 1.56 0 0 0 2.01-.92l2.32-6.18h5.56l2.32 6.18a1.57 1.57 0 0 0 2.93-1.1l-6.56-17.51a1.57 1.57 0 0 0-2.94 0l-6.56 17.51c-.3.81.1 1.71.92 2.02zm7.11-14.52l1.61 4.3h-3.22l1.61-4.3zM68.36 20.63a6.3 6.3 0 0 0-12.61 0v8.05a6.3 6.3 0 0 0 9.81 5.23l.6.6a1.56 1.56 0 0 0 2.23-2.2l-.74-.74c.45-.86.7-1.85.7-2.9v-8.04zm-4.23 7.42a1.57 1.57 0 0 0-2.22 2.2l1.35 1.36a3.16 3.16 0 0 1-4.38-2.93v-8.05a3.18 3.18 0 0 1 6.35 0v8.05c0 .15-.02.3-.04.43l-1.06-1.06zM27.97 17.46h4.7a1.56 1.56 0 1 0 0-3.13h-4.7a3.84 3.84 0 0 0-3.84 3.84V33.4a1.57 1.57 0 0 0 3.14 0v-5.63h5.4a1.57 1.57 0 1 0 0-3.13h-5.4v-6.48c0-.4.31-.7.7-.7zM9.08 44.17a1.58 1.58 0 0 0-1.56 1.57 1.57 1.57 0 0 0 1.56 1.56 1.58 1.58 0 0 0 1.57-1.56 1.57 1.57 0 0 0-1.57-1.57z" fill="#000"/>
+        </svg>
+        <b>Вопрос принят на обработку</b>
+        <p>Мы постараемся ответить на него как можно быстрее</p>
+      </div>
+    </div>
+
+    <!-- feedback - изменения внесены -->
+    <div class="modal modal--xs modal--feedback" id="feedback-changes">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M78.44 44.82v-9.64L71 33.33a31.54 31.54 0 0 0-4.36-10.54l3.94-6.56-6.82-6.82-6.56 3.94A31.54 31.54 0 0 0 46.67 9l-1.85-7.43h-9.64L33.33 9a31.53 31.53 0 0 0-10.54 4.36l-6.56-3.94-6.82 6.82 3.94 6.56A31.54 31.54 0 0 0 9 33.33l-7.43 1.85v9.64L9 46.67a31.54 31.54 0 0 0 4.36 10.54l-3.94 6.56 6.82 6.82 6.56-3.94A31.54 31.54 0 0 0 33.33 71l1.85 7.43h9.64L46.67 71a31.54 31.54 0 0 0 10.54-4.36l6.56 3.94 6.82-6.82-3.95-6.56a31.54 31.54 0 0 0 4.37-10.54l7.43-1.85z" fill="#C8F5FF"/>
+          <path d="M40 61.87a21.87 21.87 0 1 0 0-43.74 21.87 21.87 0 0 0 0 43.74z" fill="#4BB9F5"/>
+          <path d="M40 49.69a9.69 9.69 0 1 0 0-19.38 9.69 9.69 0 0 0 0 19.38z" fill="#fff"/>
+          <path d="M78.81 33.66l-6.49-1.61c-.8-3.28-2.09-6.4-3.84-9.28l3.45-5.73c.37-.62.27-1.4-.24-1.91L64.87 8.3c-.5-.5-1.3-.6-1.9-.24l-5.74 3.45c-2.89-1.75-6-3.04-9.28-3.84l-1.61-6.5C46.16.48 45.54 0 44.82 0h-9.64c-.72 0-1.34.49-1.52 1.18l-1.61 6.5c-3.28.8-6.4 2.09-9.28 3.84l-5.73-3.45a1.56 1.56 0 0 0-1.91.24L8.3 15.13c-.5.5-.6 1.3-.24 1.9l3.45 5.74c-1.75 2.89-3.04 6-3.84 9.28l-6.5 1.61c-.7.18-1.18.8-1.18 1.52v9.64c0 .72.49 1.34 1.18 1.52l6.5 1.61c.8 3.28 2.09 6.4 3.84 9.28l-3.45 5.73c-.37.62-.27 1.4.24 1.91l6.82 6.82c.5.5 1.3.6 1.9.24l5.74-3.45c2.89 1.75 6 3.04 9.28 3.84l1.61 6.5c.18.7.8 1.18 1.52 1.18h9.64c.72 0 1.34-.49 1.52-1.18l1.61-6.5c3.28-.8 6.4-2.09 9.28-3.84l5.73 3.45c.62.37 1.4.27 1.91-.24l6.82-6.82c.5-.5.6-1.3.24-1.9l-3.45-5.74c1.75-2.89 3.04-6 3.84-9.28l6.5-1.61c.7-.18 1.18-.8 1.18-1.52v-9.64c0-.72-.49-1.34-1.19-1.52zm-1.94 9.94l-6.23 1.55c-.58.15-1.03.61-1.15 1.2a29.89 29.89 0 0 1-4.16 10.01c-.32.5-.33 1.15-.02 1.66l3.3 5.5-5.08 5.1-5.51-3.31c-.52-.31-1.16-.3-1.66.02a29.89 29.89 0 0 1-10.02 4.16c-.58.12-1.04.57-1.19 1.15l-1.55 6.23h-7.2l-1.55-6.23a1.56 1.56 0 0 0-1.2-1.15 29.89 29.89 0 0 1-10.01-4.16 1.56 1.56 0 0 0-1.66-.02l-5.5 3.3-5.1-5.08 3.31-5.51c.31-.51.3-1.16-.02-1.66a29.89 29.89 0 0 1-4.16-10.02 1.56 1.56 0 0 0-1.15-1.19L3.12 43.6v-7.2l6.24-1.55c.58-.15 1.03-.61 1.15-1.2a29.89 29.89 0 0 1 4.16-10.01c.32-.5.33-1.15.02-1.66l-3.3-5.5 5.08-5.1 5.51 3.31c.51.31 1.16.3 1.66-.02a29.88 29.88 0 0 1 10.02-4.16 1.56 1.56 0 0 0 1.19-1.15l1.55-6.24h7.2l1.55 6.24c.15.58.6 1.03 1.2 1.15 3.57.77 6.94 2.17 10.01 4.16.5.32 1.14.33 1.66.02l5.5-3.3 5.1 5.08-3.31 5.51c-.31.51-.3 1.16.02 1.66a29.89 29.89 0 0 1 4.16 10.02c.12.58.57 1.04 1.15 1.19l6.23 1.55v7.2z" fill="#000"/>
+          <path d="M40 16.56c-3.64 0-7.14.82-10.38 2.42a1.56 1.56 0 1 0 1.38 2.8A20.34 20.34 0 0 1 60.3 40c.01 11.2-9.1 20.31-20.3 20.31a20.34 20.34 0 0 1-17.5-30.64 1.56 1.56 0 1 0-2.68-1.59A23.46 23.46 0 0 0 40 63.44 23.46 23.46 0 0 0 63.44 40 23.46 23.46 0 0 0 40 16.56z" fill="#000"/>
+          <path d="M40 28.75c-6.2 0-11.25 5.05-11.25 11.25S33.8 51.25 40 51.25 51.25 46.2 51.25 40 46.2 28.75 40 28.75zm0 19.38a8.13 8.13 0 0 1 0-16.26 8.13 8.13 0 0 1 0 16.25zM25.1 25.56a1.57 1.57 0 0 0 1.55-1.57 1.57 1.57 0 0 0-1.56-1.56A1.57 1.57 0 0 0 23.53 24a1.57 1.57 0 0 0 1.56 1.57z" fill="#000"/>
+        </svg>
+        <b>Изменения успешно внесены!</b>
+        <p>Полностью и корректно заполенный аккаунт упростит работу с сайтом</p>
+      </div>
+    </div>
+
+    <!-- feedback - пароль изменен -->
+    <div class="modal modal--xs modal--feedback" id="feedback-pass-changed">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="57" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.52 24.69A26.9 26.9 0 0 0 1.6 51.56a26.9 26.9 0 0 0 26.92 26.88 26.9 26.9 0 0 0 26.92-26.88A26.9 26.9 0 0 0 28.52 24.7z" fill="#C8F5FF"/>
+          <path d="M24.59 52.08a6.23 6.23 0 0 1 3.75-11.12 6.26 6.26 0 0 1 4.1 11.12c-.28.23-.44.58-.44.95v5.66a3.47 3.47 0 0 1-6.96 0v-5.66c0-.37-.16-.72-.45-.95z" fill="#5A55E1"/>
+          <path d="M17.25 26.58V20.3a11.26 11.26 0 0 1 22.54 0v6.27l7.5 5.3V20.32c0-10.35-8.4-18.75-18.77-18.75A18.76 18.76 0 0 0 9.74 20.31V31.9l7.51-5.31z" fill="#78D2FA"/>
+          <path d="M20.7 46.84a7.85 7.85 0 0 0 2.78 6.34v5.51a5.04 5.04 0 0 0 10.08 0v-5.5a7.77 7.77 0 0 0 .41-11.58 7.84 7.84 0 0 0-13.27 5.23zm3.13.15a4.7 4.7 0 0 1 9.38.22c0 1.42-.63 2.75-1.74 3.65a2.78 2.78 0 0 0-1.04 2.17v5.66a1.91 1.91 0 0 1-3.82 0v-5.66c0-.85-.38-1.64-1.04-2.17a4.65 4.65 0 0 1-1.74-3.87z" fill="#000"/>
+          <path d="M48.86 31.68V20.31a20.35 20.35 0 0 0-40.69 0v11.35A28.48 28.48 0 0 0 .62 45.83a1.56 1.56 0 0 0 3.06.63 25.36 25.36 0 0 1 50.19 5.1 25.36 25.36 0 0 1-50.19 5.1 1.56 1.56 0 0 0-3.06.63A28.5 28.5 0 0 0 28.52 80 28.5 28.5 0 0 0 57 51.56c0-7.73-3.1-14.75-8.14-19.88zM28.52 3.13c9.49 0 17.21 7.7 17.21 17.18v8.61a28.55 28.55 0 0 0-4.38-2.74v-5.87a12.84 12.84 0 0 0-25.66 0v5.87c-1.54.77-3 1.68-4.39 2.73v-8.6c0-9.47 7.73-17.18 17.22-17.18zm-9.7 21.7V20.3a9.7 9.7 0 0 1 19.4 0v4.52a28.39 28.39 0 0 0-19.4 0z" fill="#000"/>
+          <path d="M47.44 50.46a1.57 1.57 0 0 0 0 2.2 1.58 1.58 0 0 0 2.22 0 1.57 1.57 0 0 0 0-2.2 1.58 1.58 0 0 0-2.22 0zM42.02 34.73A21.68 21.68 0 0 0 28.52 30a1.56 1.56 0 1 0 0 3.13c8.6 0 16 5.83 17.97 14.18a1.56 1.56 0 0 0 3.05-.72 21.65 21.65 0 0 0-7.52-11.86zM1.64 53.13a1.56 1.56 0 1 0 0-3.13h-.08a1.56 1.56 0 1 0 0 3.13h.08z" fill="#000"/>
+        </svg>
+        <b>Пароль успешно изменен!</b>
+        <p>Запишите или запомните ваш новый пароль</p>
+      </div>
+    </div>
+
+    <!-- feedback - сообщение отправлено -->
+    <div class="modal modal--xs modal--feedback" id="feedback-mail">
+      <button class="btn-close" data-fancybox-close><span class="icon-close"></span></button>
+      <div class="flexible flexible--center">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M66.88 16.14l11.56 11.35v40.09c0 6-4.86 10.86-10.86 10.86H12.42c-6 0-10.86-4.86-10.86-10.86V27.49l11.48-11.48 53.84.13z" fill="#F5C86E"/>
+          <path d="M52.97 52.97l13.9-13.91V6.25c0-2.59-2.1-4.69-4.68-4.69H17.8a4.69 4.69 0 0 0-4.68 4.69v32.8l13.9 13.92L40 45.92l12.97 7.05z" fill="#fff"/>
+          <path d="M66.88 16.14l11.56 11.35-11.56 11.57V16.14zM13.13 16.14L1.55 27.49l11.56 11.57V16.14z" fill="#FF6E37"/>
+          <path d="M58.54 76.88h-.02a1.56 1.56 0 0 0 0 3.12h.02a1.56 1.56 0 0 0 0-3.13z" fill="#000"/>
+          <path d="M79.54 26.38l-11.1-11.02V6.25c0-3.45-2.8-6.25-6.25-6.25H17.8a6.26 6.26 0 0 0-6.25 6.25v9.03L.46 26.38c-.3.3-.46.7-.46 1.11v40.09C0 74.43 5.57 80 12.42 80h39.13a1.56 1.56 0 0 0 0-3.13H12.42a9.24 9.24 0 0 1-4.97-1.44l2.93-2.93h24a1.56 1.56 0 0 0 0-3.13H13.5l18.64-18.64a11.13 11.13 0 0 1 15.72 0l24.7 24.7a9.24 9.24 0 0 1-4.98 1.44h-2.11a1.56 1.56 0 0 0 0 3.13h2.1a12.37 12.37 0 0 0 8.45-3.31l.06-.07A12.39 12.39 0 0 0 80 67.58V27.49c0-.41-.17-.81-.46-1.1zm-3.32 1.12l-7.78 7.78V19.77l7.78 7.73zm-64.66 7.78L3.77 27.5l7.8-7.79v15.58zm-8.44 32.3V31.27L25.16 53.3 5.12 73.33a9.25 9.25 0 0 1-2-5.75zm26.81-19.06l-2.56 2.57L14.69 38.4V6.25c0-1.72 1.4-3.13 3.12-3.13H62.2c1.72 0 3.12 1.4 3.12 3.13v32.16L52.63 51.09l-2.56-2.57a14.26 14.26 0 0 0-20.14 0zm44.95 24.8L54.84 53.3l22.03-22.03v36.3c0 2.18-.74 4.18-2 5.76z" fill="#000"/>
+          <path d="M25.24 17.5h15.7a1.56 1.56 0 0 0 0-3.13h-15.7a1.56 1.56 0 0 0 0 3.13zM48.18 17.5a1.57 1.57 0 0 0 1.1-2.67 1.57 1.57 0 0 0-2.67 1.1 1.57 1.57 0 0 0 1.57 1.57zM25.24 28.75h29.52a1.56 1.56 0 0 0 0-3.13H25.24a1.56 1.56 0 0 0 0 3.13zM56.32 38.44c0-.87-.7-1.56-1.56-1.56H25.24a1.56 1.56 0 0 0 0 3.12h29.52c.86 0 1.56-.7 1.56-1.56z" fill="#000"/>
+        </svg>
+        <b>Сообщение отправлено</b>
+        <p>Мы постараемся ответить на него как можно быстрее</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.drilldown.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

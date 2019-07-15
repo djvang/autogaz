@@ -1,0 +1,34 @@
+.product__intro.product-col--lg
+    .product__header.product-col
+        include __product-header-missing-options.html
+        .product__buy.no-mob.not-available
+            include __product-buy-missing.html
+    .flexible.no-desktop
+        .product__gallery.product-col.product-col--sm
+            include __product-gallery.html
+        .product__specifications.product-col.product-col--sm.tablet-only
+            h2 Характеристики
+            include __product-spec-list.html
+    .product__buy.mob-only.not-available
+        include __product-buy-missing.html
+    .product__similar
+        .similar__header
+            b Похожие товары в наличии
+        .similar__cards.flexible
+            include __similar-cards.html
+        button(class="btn-load mob-only", type="button")
+            b.color--link Показать ещё
+.product__gallery.product-col.product-col--sm.desktop-only
+    include __product-gallery.html
+.product__about.product-col.product-col--lg.flexible.no-mob
+    .kit
+        h2 Комплект
+        include __kit
+    .about__description
+        h2 Описание
+        include __product-desc.html
+.product__specifications.product-col.product-col--sm.desktop-only
+    h2 Характеристики
+    include __product-spec-list.html
+.product__info.product-col.no-mob
+    include __product-info.html

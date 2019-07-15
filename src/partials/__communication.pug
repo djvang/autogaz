@@ -1,0 +1,587 @@
+<div class="communication">
+    <div class="communication__tabs">
+        <ul class="tabs-list flexible grad">
+            <li class="mob-only" data-tab="comm-specs"><b>Характеристики</b></li>
+
+            if kit
+                <li class="mob-only" data-tab="comm-kit"><b>Комплект</b></li>
+
+            <li class="mob-only" data-tab="comm-about"><b>Описание</b></li>
+
+            <li class="active" data-tab="comm-comments">
+                <b>Отзывы <span>(4)</span></b>
+            </li>
+
+            <li data-tab="comm-questions">
+                <b>Вопросы <span>(19)</span></b>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="comm-specs">
+            <div class="product__specifications">
+                <ul class="specifications__list">
+                    <li>
+                        <span class="specifications__title">Электроника:</span>
+                        <span class="specifications__subtitle">STAG-200 GoFast</span>
+                    </li>
+
+                    <li>
+                        <span class="specifications__title">Редуктор:</span>
+                        <span class="specifications__subtitle">Tomasetto Alaska</span>
+                    </li>
+
+                    <li>
+                        <span class="specifications__title">Форсунки:</span>
+                        <span class="specifications__subtitle">Valtek 30</span>
+                    </li>
+
+                    <li>
+                        <span class="specifications__title">Баллон:</span>
+                        <span class="specifications__subtitle">42л (тороидальный)</span>
+                    </li>
+
+                    <li>
+                        <span class="specifications__title">Страна производитель:</span>
+                        <span class="specifications__subtitle">Польша</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        if kit
+            .tab-content#comm-kit
+                .product__about
+                    .kit
+                        include __kit
+
+        <div class="tab-content" id="comm-about">
+            <div class="product__about">
+                <p>Автоадаптация OBD гарантирует впрыск газа, точно подбираемый к условиям работы и нагрузки двигателя. Влияние на состав смеси имеет не только информация о времени впрыска бензина, но также модификация, в соответствии с текущей коррекцией бензинового блока управления.</p>
+
+                <p>Автоматический сбрасыватель ошибок OBD обеспечивает автоматическое удаление выбранных неисправностей OBD, без необходимости подключения внешних устройс...</p>
+
+                <div class="panel__more">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum esse aliquam laudantium sint voluptatibus provident reiciendis, laboriosam facilis porro voluptates.</p>
+                </div>
+
+                <span class="btn-more color--link">
+                    <span class="btn-more-show">Читать полностью</span>
+                    <span class="btn-more-hide">Скрыть полностью</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="tab-content current" id="comm-comments">
+            <div class="flexible">
+                <div class="product-comments">
+                    <div class="communication__review">
+                        <div class="star-rating">
+                        <div class="star-rating__wrap">
+                            <span class="star-rating__ico"></span>
+                            <span class="star-rating__ico filled"></span>
+                            <span class="star-rating__ico filled"></span>
+                            <span class="star-rating__ico filled"></span>
+                            <span class="star-rating__ico filled"></span>
+                        </div>
+
+                        <b>
+                            <span class="star-rating__number">4.8</span>
+                            <span> из 5</span>
+                        </b>
+                        </div>
+
+                        <p>Отзывы о Комплект ГБО Tomasetto электронный, для ВАЗ (карб. Озон, Вебер) с&nbsp;цилиндрическим баллоном 50 л.</p>
+                    </div>
+
+                    <div class="communication__messages flexible">
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+
+                                        <div class="star-rating">
+                                            <div class="star-rating__wrap">
+                                                <span class="star-rating__ico"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид.</div>
+
+                                <div class="item__advantages holder">
+                                    <b>Достоинства: </b>
+
+                                    <span>При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком.</span>
+                                </div>
+
+                                <div class="item__disadvantages holder">
+                                    <b>Недостатки: </b>
+
+                                    <span>Немного игр.</span>
+                                </div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <form class="item__form" action="">
+                                    <textarea class="form-control" name="reply" placeholder="Напишите свой ответ..."></textarea>
+
+                                    <button class="btn btn--primary" type="submit">Ответить</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                <div class="item__user-data flexible">
+                                    <b class="user-data__name">Виктор</b>
+
+                                    <div class="star-rating">
+                                    <div class="star-rating__wrap">
+                                        <span class="star-rating__ico"></span>
+                                        <span class="star-rating__ico filled"></span>
+                                        <span class="star-rating__ico filled"></span>
+                                        <span class="star-rating__ico filled"></span>
+                                        <span class="star-rating__ico filled"></span>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__date">
+                                    <span>19 июня 2018</span>
+                                </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                <span class="btn-reply color--link">Ответить</span>
+
+                                <div class="item__vote flexible">
+                                    <button class="btn-like" type="button">
+                                    <span class="count">17</span>
+                                    </button>
+
+                                    <button class="btn-dislike" type="button">
+                                    <span class="count">4</span>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+
+                                        <div class="star-rating">
+                                            <div class="star-rating__wrap">
+                                                <span class="star-rating__ico"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                                <span class="star-rating__ico filled"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item__answers">
+                                <div class="messages__item">
+                                    <div class="item__info">
+                                        <div class="item__header flexible">
+                                            <div class="item__user-data flexible">
+                                                <b class="user-data__name">Виктор</b>
+                                            </div>
+
+                                            <div class="item__date">
+                                                <span>19 июня 2018</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид.</div>
+
+                                        <div class="item__footer holder flexible">
+                                            <div class="item__vote flexible">
+                                                <button class="btn-like" type="button">
+                                                <span class="count">17</span>
+                                                </button>
+
+                                                <button class="btn-dislike" type="button">
+                                                <span class="count">4</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+
+                                        <div class="star-rating">
+                                        <div class="star-rating__wrap">
+                                            <span class="star-rating__ico"></span>
+                                            <span class="star-rating__ico filled"></span>
+                                            <span class="star-rating__ico filled"></span>
+                                            <span class="star-rating__ico filled"></span>
+                                            <span class="star-rating__ico filled"></span>
+                                        </div>
+                                        </div>
+
+                                        <span class="buyed-info">Уже купил</span>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-load" type="button">
+                            <b class="color--link">Показать ещё</b>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="communication__form no-mob">
+                    <form class="form-evaluation" method="post" action="">
+                        <div class="form__top flexible">
+                            <b>Оцените товар</b>
+
+                            <div class="star-rating">
+                                <div class="star-rating__wrap">
+                                    <input class="star-rating__input" id="modal-star-rating-5" type="radio" name="rating" value="5">
+                                    <label class="star-rating__ico custom" for="modal-star-rating-5" title="Товар отличный"></label>
+
+                                    <input class="star-rating__input" id="modal-star-rating-4" type="radio" name="rating" value="4">
+                                    <label class="star-rating__ico custom" for="modal-star-rating-4" title="Товар хороший"></label>
+
+                                    <input class="star-rating__input" id="modal-star-rating-3" type="radio" name="rating" value="3">
+                                    <label class="star-rating__ico custom" for="modal-star-rating-3" title="Товар нормальный"></label>
+
+                                    <input class="star-rating__input" id="modal-star-rating-2" type="radio" name="rating" value="2">
+                                    <label class="star-rating__ico custom" for="modal-star-rating-2" title="Товар так себе"></label>
+
+                                    <input class="star-rating__input" id="modal-star-rating-1" type="radio" name="rating" value="1">
+                                    <label class="star-rating__ico custom" for="modal-star-rating-1" title="Товар плохой"></label>
+                                </div>
+
+                                <div class="star-rating__text"></div>
+                            </div>
+                        </div>
+
+                        <div class="field-box">
+                            <textarea class="form-control" name="advantages" placeholder="Достоинства"></textarea>
+                        </div>
+                        <div class="field-box">
+                            <textarea class="form-control" name="disadvantages" placeholder="Недостатки"></textarea>
+                        </div>
+                        <div class="field-box">
+                            <textarea class="form-control" name="comment" placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="field-box field-box--name">
+                            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+                        </div>
+                        <div class="field-box">
+                            <input class="form-control" type="email" name="email" placeholder="E-mail">
+                        </div>
+                        <button class="btn btn--primary" type="submit">Оставить отзыв</button>
+                    </form>
+                    <p class="form-importantly">Важно! Чтобы Ваш вопрос либо комментарий прошел модерацию и был опубликован, ознакомьтесь, пожалуйста, с <a href="#">нашими правилами</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="comm-questions">
+            <div class="flexible">
+                <div class="product-answers">
+                    <div class="communication__messages flexible">
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид.</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <form class="item__form" action="">
+                                    <textarea class="form-control" name="reply" placeholder="Напишите свой ответ..."></textarea>
+
+                                    <button class="btn btn--primary" type="submit">Ответить</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item__answers">
+                                <div class="messages__item">
+                                    <div class="item__info">
+                                        <div class="item__header flexible">
+                                            <div class="item__user-data flexible">
+                                                <b class="user-data__name">Виктор</b>
+                                            </div>
+
+                                            <div class="item__date">
+                                                <span>19 июня 2018</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид.</div>
+
+                                        <div class="item__footer holder flexible">
+                                            <div class="item__vote flexible">
+                                                <button class="btn-like" type="button">
+                                                    <span class="count">17</span>
+                                                </button>
+
+                                                <button class="btn-dislike" type="button">
+                                                    <span class="count">4</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="messages__item item--autogas">
+                                    <div class="item__info">
+                                        <div class="item__header flexible">
+                                            <div class="item__user-data flexible">
+                                                <b class="user-data__name">Ответ</b>
+
+                                                <img src="images/logo.svg" width="112" height="28" alt="Логотип">
+                                            </div>
+
+                                            <div class="item__date">
+                                                <span>19 июня 2018</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид.</div>
+
+                                        <div class="item__footer holder flexible">
+                                            <div class="item__vote flexible">
+                                                <button class="btn-like" type="button">
+                                                    <span class="count">17</span>
+                                                </button>
+
+                                                <button class="btn-dislike" type="button">
+                                                    <span class="count">4</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="messages__item-more">
+                                    <span class="item-more__btn color--link">Читать все ответы</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="messages__item">
+                            <div class="item__info">
+                                <div class="item__header flexible">
+                                    <div class="item__user-data flexible">
+                                        <b class="user-data__name">Виктор</b>
+                                    </div>
+
+                                    <div class="item__date">
+                                        <span>19 июня 2018</span>
+                                    </div>
+                                </div>
+
+                                <div class="item__data holder">Мне понравился этот телефон, как только его увидел. Тонкие рамки, красивый дисплей. Последний андроид. При обычном пользовании телефона хватает на день работы, при нескольких часах музыки, немного игр и пару десятков звонком. Довольне неплохо оптимизирован. Хочу к нему чехол, есть в наличии?</div>
+
+                                <div class="item__footer holder flexible">
+                                    <span class="btn-reply color--link">Ответить</span>
+
+                                    <div class="item__vote flexible">
+                                        <button class="btn-like" type="button">
+                                            <span class="count">17</span>
+                                        </button>
+
+                                        <button class="btn-dislike" type="button">
+                                            <span class="count">4</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-load" type="button">
+                            <b class="color--link">Показать ещё</b>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="communication__form no-mob">
+                    <div class="form__top">
+                        <b>Напишите свой вопрос</b>
+                    </div>
+
+                    <form class="form-question" method="post" action="">
+                        <div class="field-box">
+                            <textarea class="form-control" name="question" placeholder="Текст вопроса"></textarea>
+                            <span class="error-element"></span>
+                        </div>
+                        <div class="field-box field-box--name">
+                            <input class="form-control" type="text" name="name" placeholder="Как вас зовут?">
+                            <span class="error-element"></span>
+                        </div>
+                        <div class="field-box">
+                            <input class="form-control" type="email" name="email" placeholder="E-mail">
+                            <span class="error-element"></span>
+                        </div>
+                        <button class="btn btn--primary" type="submit">Отправить вопрос</button>
+                    </form>
+                    <p class="form-importantly">Важно! Чтобы Ваш вопрос либо комментарий прошел модерацию и был опубликован, ознакомьтесь, пожалуйста, с <a href="#">нашими правилами</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

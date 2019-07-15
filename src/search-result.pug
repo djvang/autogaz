@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Поиск результаты'
+        include partials/__head
+    body
+        .search-page#outer
+            include partials/__header.html
+            .content.container.category.category--grid
+                include partials/__category-header-search.html
+                .category-layout.flexible
+                    .category-layout__sidebar.desktop-only#category-sidebar
+                        include partials/__category-sidebar-search.html
+                    .category-layout__main
+                        include partials/__category-cards.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-search.html

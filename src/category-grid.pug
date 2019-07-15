@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Category Grid'
+        - var filters = true
+        include partials/__head
+    body
+        #outer
+            include partials/__header.html
+            include partials/__breadcrumbs
+            .content.container.category.category--grid
+                include partials/__category-header.html
+                .category-layout.flexible
+                    .category-layout__sidebar.desktop-only#category-sidebar
+                        include partials/__category-sidebar-filters.html
+                    .category-layout__main
+                        include partials/__category-cards.html
+                        include partials/__pagination.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-category-grid.html

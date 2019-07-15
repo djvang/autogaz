@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - История заказов'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer
+            include partials/__header.html
+            .content.container.flexible
+                aside.desktop-only.aside-cabinet
+                    p
+                        b Мой кабинет
+                    nav
+                        ul
+                            li.active
+                                a(href="#") История заказов
+                            li
+                                a(href="#") Корзина
+                        ul
+                            li
+                                a(href="#") Личные данные
+                            li
+                                a(href="#") Изменить пароль
+                            li.sign-out
+                                a(href="#") Выход
+                main.main-cabinet.main-cabinet--purchase
+                    header.flexible.has-dropdown
+                        h1 История заказов
+                        .heading-dropdown.dropdown.no-desktop
+                            button.dropdown__btn Мой кабинет
+                            .dropdown__content
+                                ul
+                                    li
+                                        a(href="#") История заказов
+                                    li
+                                        a(href="#") Корзина
+                                    li
+                                        a(href="#") Личные данные
+                                    li
+                                        a(href="#") Изменить пароль
+                                    li
+                                        a(href="#") Выход
+                    include partials/__purchase.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts-purchase.html

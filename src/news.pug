@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Новости'
+        include partials/__head
+    body
+        .feed-page#outer
+            include partials/__header.html
+            .content.container.flexible
+                aside.desktop-only
+                    nav
+                        ul
+                            li
+                                a(href="#") Акции
+                            li.active
+                                a(href="#") Новости
+                            li
+                                a(href="#") Статьи и обзоры
+                        ul
+                            li
+                                a(href="#") Часто задаваемые вопросы
+                        ul
+                            li
+                                a(href="#") Способы оплаты
+                            li
+                                a(href="#") Условия доставки
+                            li
+                                a(href="#") Обмен и возврат товаров
+                        ul
+                            li
+                                a(href="#") О магазине
+                            li
+                                a(href="#") Установка ГБО
+                main
+                    header.has-dropdown.flexible
+                        h1 Новости
+                        .heading-dropdown.dropdown.no-desktop
+                            button(class="dropdown__btn", type="button") Полезное
+                            .dropdown__content
+                                ul
+                                    li
+                                        a(href="#") Акции
+                                    li
+                                        a(href="#") Новости
+                                    li
+                                        a(href="#") Статьи и обзоры
+                                    li
+                                        a(href="#") Часто задаваемые вопросы
+                                    li
+                                        a(href="#") Способы оплаты
+                                    li
+                                        a(href="#") Условия доставки
+                                    li
+                                        a(href="#") Обмен и возврат товаров
+                                    li
+                                        a(href="#") О магазине
+                                    li
+                                        a(href="#") Установка ГБО
+                    include partials/__feed-item
+                    include partials/__feed-item
+                    include partials/__feed-item
+                    include partials/__pagination.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

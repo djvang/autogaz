@@ -1,0 +1,270 @@
+ <!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Checkout - login'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer.checkout-page.checkout-page--login
+            include partials/__header-checkout.html
+            .content.container.flexible
+                .checkout
+                    .content__header.header--checkout
+                        h1 Оформление заказа
+                        ul.flexible
+                            li
+                                a(href="#")
+                                    b.dashed Первый раз покупаю здесь
+                            li
+                                b Уже покупал
+                    form(action="#", method="post", class="form-checkout form-checkout--login", id="form-checkout-login")
+                        section.section-contacts
+                            .section__header
+                                h2 Авторизация
+                            p Если вы когда-нибудь у нас покупали — у вас точно есть аккаунт и он привязан к номеру, вашего мобильного телефона.
+                            .form-checkout__row.flexible
+                                .form-checkout__field-box.field-box
+                                    input(type="tel", id="form-user-tel", name="tel", class="form-control tel-mask", placeholder="+38 (___) ___-__-__", required)
+                                    span.error-element
+                                .form-checkout__field-box.field-box.holder
+                                    input(id="pass-current" class="form-control" type="password" name="password", placeholder="Пароль")
+                                    span.switch-type
+                            .section__footer.flexible
+                                button(type="submit", class="btn btn--submit btn--secondary") Войти
+                                span(class="dashed color--link", data-fancybox, data-src="#modal-pass-recovery") Забыли пароль?
+                    form(action="#", method="post", class="form-checkout", id="form-checkout")
+                        .checkout-overlay
+                        section.section-delivery
+                            .section__header
+                                h2 Способ доставки
+                            .section-delivery__method.flexible
+                                .method__list.flexible
+                                    p.no-mob По Украине:
+                                    label(class="radiobtn radiobtn--center", data-name="Новая Почта", data-src="#modal-delivery--novaya-pochta")
+                                        b Новая Почта
+                                        input(type="radio", name="delivery-method", class="radiobtn__post", required, disabled)
+                                        span.radiomark
+                                    label(class="radiobtn radiobtn--center", data-name="Интайм", data-src="#modal-delivery--intaim", disabled)
+                                        b Интайм
+                                        input(type="radio", name="delivery-method", class="radiobtn__post")
+                                        span.radiomark
+                                    label(class="radiobtn radiobtn--center", data-name="Автолюкс", data-src="#modal-delivery--avtolyuks", disabled)
+                                        b Автолюкс
+                                        input(type="radio", name="delivery-method", class="radiobtn__post", disabled)
+                                        span.radiomark
+                                    label(class="radiobtn radiobtn--center", data-name="Деливери", data-src="#modal-delivery--delivery", disabled)
+                                        b Деливери
+                                        input(type="radio", name="delivery-method", class="radiobtn__post", disabled)
+                                        span.radiomark
+                                    label(class="radiobtn radiobtn--center", data-name="Интайм", data-src="#modal-delivery--intaim", disabled)
+                                        b Интайм
+                                        input(type="radio", name="delivery-method", class="radiobtn__post", disabled)
+                                        span.radiomark
+                                .method__list.flexible
+                                    p.no-mob По Харькову:
+                                    label.radiobtn.radiobtn--center
+                                        b Самовывоз
+                                        input(type="radio", name="delivery-method", id="radiobtn__self", class="radiobtn__self", disabled)
+                                        span.radiomark
+                                    label.radiobtn.radiobtn--center
+                                        b Курьером по адресу
+                                        input(type="radio", name="delivery-method", id="radiobtn__courier", class="radiobtn__courier", disabled)
+                                        span.radiomark
+                            .section-delivery__panel.panel--post
+                                .form-checkout__row.flexible
+                                    label(for="delivery-city") Город #[span (населенный пункт)]
+                                    .form-checkout__field-box.field-box
+                                        input(type="text", id="delivery-city", name="delivery-city", class="form-control", placeholder="Выберите из списка (начните ввод)...", disabled)
+                                        span.error-element
+                                .form-checkout__row.flexible
+                                    label(for="delivery-number") Номер отделения
+                                    .form-checkout__field-box.field-box
+                                        input(type="text", id="delivery-number", name="delivery-number", class="form-control", disabled)
+                                        span.error-element
+                            .section-delivery__panel.panel--self
+                                .flexible
+                                    .col
+                                        mark Магазин №12
+                                        b Авторынок «Лоск» #[span Восточная сторона]
+                                    .col
+                                        p пл. Юрия Кононенко, 1, 62416, Харьков
+                                .map#map
+                            .section-delivery__panel.panel--courier
+                                .panel__info
+                                    b Адресная доставка курьером доступна только по Харькову
+                                    p Заполнителя все поля адреса получателя
+                                .form-checkout__row.flexible
+                                    .wrapper.wrapper--street
+                                        label(for="delivery-street") Улица
+                                        .field-box
+                                            input(id="delivery-street", class="form-control", type="text", name="delivery-street", disabled)
+                                            span.error-element
+                                    .wrapper.wrapper--house
+                                        label(for="delivery-house") Дом
+                                        .field-box
+                                            input(id="delivery-house", class="form-control", type="text", name="delivery-house", disabled)
+                                            span.error-element
+                                    .wrapper.wrapper--apartment
+                                        label(for="delivery-apartment") Квартира
+                                        .field-box
+                                            input(id="delivery-apartment", class="form-control", type="text", name="delivery-apartment", disabled)
+                                            span.error-element
+                        section.section-payment
+                            .section__header
+                                h2 Способ оплаты
+                            .payment-method.flexible
+                                .radiobtn
+                                    input(type="radio", name="payment-method", id="payment-method-receipt", required, disabled)
+                                    label.label-receipt.flexible(for="payment-method-receipt")
+                                        b Оплата при получении (наложенный платёж)
+                                .radiobtn
+                                    input(type="radio", name="payment-method", id="payment-method-cash", disabled)
+                                    label.label-cash.flexible(for="payment-method-cash")
+                                        b Наличный расчёт
+                                .radiobtn
+                                    input(type="radio", name="payment-method", id="payment-method-card", disabled)
+                                    label.label-card.flexible(for="payment-method-card")
+                                        b Оплата на карту (ПриватБанк)
+                        section.section-compatibility
+                            .section__header.flexible
+                                h2 Cовместимость комплекта ГБО с авто
+                                b БЕСПЛАТНО
+                                p Наш менеджер проверит на совместимость комплект ГБО из заказа с вашим автомобилем.
+                                    |  Укажите известную вам информацию о вашем авто
+                            .js-compatibility
+                                .form-checkout__row
+                                    label.checkbox.checkbox--center
+                                        span Авто пригнан из США
+                                        input(type="checkbox", checked, disabled)
+                                        span.checkmark
+                                .form-checkout__row.flexible
+                                    .wrapper.wrapper--car-brand
+                                        label(for="personal-data-car-brand") Марка автомобиля
+                                        .field-box
+                                            input(id="personal-data-car-brand", class="form-control", type="text", name="personal-data-car-brand", disabled)
+                                            span.error-element
+                                    .wrapper.wrapper--car-model
+                                        label(for="personal-data-car-model") Модель
+                                        .field-box
+                                            input(id="personal-data-car-model", class="form-control", type="text", name="personal-data-car-model", disabled)
+                                            span.error-element
+                                .form-checkout__row.flexible.space-between
+                                    .wrapper.wrapper--car-year
+                                        label(for="personal-data-car-year") Год выпуска
+                                        .field-box
+                                            input(id="personal-data-car-year", class="form-control", type="text", name="personal-data-car-year", disabled)
+                                            span.error-element
+                                    .wrapper.wrapper--car-volume
+                                        label(for="personal-data-car-volume") Объем, л
+                                        .field-box
+                                            input(id="personal-data-car-volume", class="form-control", type="text", name="personal-data-car-volume", disabled)
+                                            span.error-element
+                                    .wrapper.wrapper--car-vin
+                                        label(for="personal-data-car-vin") VIN
+                                        .field-box
+                                            input(id="personal-data-car-vin", class="form-control", type="text", name="personal-data-car-vin", disabled)
+                                            span.error-element
+                            .form-checkout__row
+                                label.checkbox.checkbox--center
+                                    b Не нужно проверять на совместимость
+                                    input(type="checkbox", id="check-compatibility", disabled)
+                                    span.checkmark
+                            p Отказываясь от проверки на совместимость, я принимаю условия #[a(href="#", class="policy") о возврате и обмене]
+                        footer
+                            span.btn-add-comment.dashed.color--link
+                                span.btn-more-show Добавить комментарий к заказу
+                                span.btn-more-hide Скрыть комментарий к заказу
+                            .panel__more
+                                textarea(class="form-control", placeholder="Комментарий")
+                            button(type="submit", class="btn btn--submit btn--secondary no-mob", disabled) Подтвердить заказ
+                            p.no-mob Подтверждая заказ, я принимаю условия #[a(href="#") пользовательского соглашения]
+                .order-bar
+                    .order-bar__header.flexible
+                        b Ваш заказ
+                        a(href="#") Редактировать
+                    .order-items
+                        .order-item
+                            .order-item__image.no-mob
+                                img(src="images/komplekt-kme-nevo-4-cil.png", alt="")
+                            .order-item__info
+                                span Полный комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, фил. 11/11, тор. 42л., мул. Tomasetto)
+                                .order-item__price-line.flexible
+                                    span.order-item__price
+                                        b 6 226 грн
+                                        span (2 шт.)
+                                    span.order-item__price-total
+                                        b 12 452 грн
+                        .order-item
+                            .order-item__image.no-mob
+                                img(src="images/komplekt-kme-nevo-4-cil.png", alt="")
+                            .order-item__info
+                                span STAG-200 GoFast 4 цил.
+                                .order-item__price-line.flexible
+                                    span.order-item__price
+                                        b 100 грн
+                                        span (1 шт.)
+                                    span.order-item__price-total
+                                        b 100 грн
+                        .order-item
+                            .order-item__image.no-mob
+                                img(src="images/komplekt-kme-nevo-4-cil.png", alt="")
+                            .order-item__info
+                                span STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, тор. 42л., мул. Tomasetto)
+                                .order-item__price-line.flexible
+                                    span.order-item__price
+                                        b 8 грн
+                                        span (16 шт.)
+                                    span.order-item__price-total
+                                        b 128 грн
+                    .order-bar__price
+                        .price__row.flexible
+                            p Сумма всех товаров без&nbsp;скидки:
+                            span 
+                                b 862 грн
+
+                        .price__row.flexible
+                            p Сумма скидки:
+                            span
+                                b 0 грн
+                        .price__row.price__row--delivery.flexible.mail
+                            p
+                                span#mail-title Доставка «Новая Почта»
+                                span(class="btn-delivery color--link", data-fancybox, data-src="#modal-delivery") Подробнее о доставке
+                            p
+                                b За счёт получателя
+                        .price__row.price__row--delivery.flexible.self-export
+                            p
+                                span Самовывоз
+                                span(class="btn-delivery color--link", data-fancybox, data-src="#modal-delivery") Подробнее о доставке
+                            p
+                                b Бесплатно :)
+                        .price__row.price__row--delivery.flexible.courier
+                            p
+                                span Доставка курьером по Харькову
+                                span(class="btn-delivery color--link", data-fancybox, data-src="#modal-delivery") Подробнее о доставке
+                            span
+                                b 50 грн
+                        .price__row.price__row--total.flexible
+                            p
+                                b Итого:
+                            span
+                                b#total-price.total-price 862 грн
+                                b#total-price--courier.total-price--courier 912 грн
+                    .order-bar__promocode
+                        button(type="button", class="btn-promo-code color--link dashed") У меня есть промо-код
+                        form(action="", method="post")
+                            .form__row.flexible
+                                input(type="text", class="form-control", placeholder="Введите промо-код")
+                                button(type="submit" class="btn btn--primary") OK
+                            .promocode__message.message--valid
+                                p Код #[b orjeunesse] принят!
+                                span Ваша скидка 12%
+                            .promocode__message.message--invalid
+                                p Код введен неправильно :(
+                .form-footer.mob-only
+                    .checkout-overlay
+                    button(type="submit", form="form-checkout", class="btn btn--submit btn--secondary mob-only", disabled) Подтвердить заказ
+                    p.mob-only Подтверждая заказ, я принимаю условия #[a(href="#") пользовательского соглашения]
+            include partials/__footer-checkout.html
+        include partials/__modals.html
+        include partials/__scripts-checkout-login.html

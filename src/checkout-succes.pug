@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Checkout Thank You'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer.checkout-page
+            include partials/__header-checkout.html
+            .content.container.checkout-succes
+                .checkout-succes__header.flexible
+                    b Спасибо, ваш заказ принят
+                    a(href="#") #[span(class="print no-mob") Распечатать заказ]
+                .checkout-succes__data
+                    .data__col.col--main
+                        .data-total
+                            .data-total__row.row--capital.row--number.flexible
+                                .row__title
+                                    b № заказа
+                                .row__value
+                                    b 489 416 518
+                            .data-total__row.row--date.flexible
+                                .row__title Дата заказа:
+                                .row__value 20 июля 2018, 17:51
+                            .data-total__row.row--recipient.flexible
+                                .row__title Получатель:
+                                .row__value Константинопольский Константин
+                            .data-total__row.row--tel.flexible
+                                .row__title Телефон получателя:
+                                .row__value +38 (093) 000-00-00
+                            .data-total__row.row--delivery.flexible
+                                .row__title Доставка:
+                                .row__value #[b «Новая Почта», отделение №83,] Комсомольское, Змиевской р-й, Харьковская обл.
+                            .data-total__row.row--delivery-price.flexible
+                                .row__title Стоимость доставки:
+                                .row__value За счёт получателя
+                            .data-total__row.row--pay-method.flexible
+                                .row__title Метод оплаты:
+                                .row__value Оплата при получении (наложенный платёж)
+                            .data-total__row.row--capital.row--price-total.flexible
+                                .row__title
+                                    b Сумма к оплате:
+                                .row__value
+                                    b 16 297 грн
+                        .data-info.desktop-only
+                            b Наш менеджер уже побежал на склад готовить ваш заказ, сейчас он вернется и обязательно перезвонит :)
+                            a(href="#")
+                                span.continue-buy Продолжить покупки
+                            p Если у вас возникли вопросы относительно заказа или нашей работ, пожалуйста, #[span(class="btn-issue color--link", data-fancybox="", data-src="#modal-issue") свяжитесь с нами]
+                    .data__col.col--sm.col--compatibility
+                        .col__title.no-mob
+                            b Совместимость с авто
+                        .col__title.accordion.mob-only
+                            b Совместимость с авто
+                        .accordion-panel
+                            ul
+                                li Volkswagen, Passat B7
+                                li 2014 г.в.
+                                li 2.5 л
+                                li WVGZZZ7LZ8D066977
+                                li(data-usa) 
+                                    span Пригнан из США
+                            p Мы проверим на совместимость содержимое заказа с вашим автомобилем.
+                            p Если будет обнаружена несовместимость, наш менеджер подберет подходящие аналоги и предложит их вам.
+                    .data__col.col--sm.col--order
+                        .col__title.no-mob
+                            b Ваш заказ
+                        .col__title.accordion.mob-only
+                            b Ваш заказ
+                        .accordion-panel
+                            .order-item
+                                .order-item__info
+                                    span Полный комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, фил. 11/11, тор. 42л., мул. Tomasetto)
+                                    .order-item__price-line.flexible
+                                        span.order-item__price
+                                            b 6 226 грн
+                                            span (2 шт.)
+                                        span.order-item__price-total
+                                            b 12 452 грн
+                            .order-item
+                                .order-item__info
+                                    span STAG-200 GoFast 4 цил.
+                                    .order-item__price-line.flexible
+                                        span.order-item__price
+                                            b 100 грн
+                                            span (1 шт.)
+                                        span.order-item__price-total
+                                            b 100 грн
+                            .order-item
+                                .order-item__info
+                                    span STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, тор. 42л., мул. Tomasetto)
+                                    .order-item__price-line.flexible
+                                        span.order-item__price
+                                            b 8 грн
+                                            span (16 шт.)
+                                        span.order-item__price-total
+                                            b 128 грн
+                        .col__footer.no-mob
+                            b Отследить статус вашего заказа можно в #[a(href="#") личном кабинете]
+                    .data-info.no-desktop
+                        b Наш менеджер уже побежал на склад готовить ваш заказ, сейчас он вернется и обязательно перезвонит :)
+                        a(href="#")
+                            span.continue-buy Продолжить покупки
+                        p Если у вас возникли вопросы относительно заказа или нашей работ, пожалуйста, #[span(class="btn-issue color--link", data-fancybox, data-src="#modal-issue") свяжитесь с нами]
+            include partials/__footer-checkout.html
+        include partials/__modals.html
+        include partials/__scripts.html

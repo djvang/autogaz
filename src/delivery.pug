@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Доставка'
+        include partials/__head
+    body
+        .delivery-page#outer
+            include partials/__important-info.html
+            include partials/__header.html
+            .content.container.flexible
+                aside.desktop-only
+                    nav
+                        ul
+                            li
+                                a(href="#") Акции
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Статьи и обзоры
+                        ul
+                            li
+                                a(href="#") Часто задаваемые вопросы
+                        ul
+                            li
+                                a(href="#") Способы оплаты
+                            li.active
+                                a(href="#") Условия доставки
+                            li
+                                a(href="#") Обмен и возврат товаров
+                        ul
+                            li
+                                a(href="#") О магазине
+                            li
+                                a(href="#") Установка ГБО
+                
+                main
+                    header.has-dropdown.flexible
+                        h1 Условия доставки
+                        .heading-dropdown.dropdown.no-desktop
+                            button(class="dropdown__btn", type="button") Полезное
+                            .dropdown__content
+                                ul
+                                    li
+                                        a(href="#") Акции
+                                    li
+                                        a(href="#") Новости
+                                    li
+                                        a(href="#") Статьи и обзоры
+                                    li
+                                        a(href="#") Часто задаваемые вопросы
+                                    li
+                                        a(href="#") Способы оплаты
+                                    li
+                                        a(href="#") Условия доставки
+                                    li
+                                        a(href="#") Обмен и возврат товаров
+                                    li
+                                        a(href="#") О магазине
+                                    li
+                                        a(href="#") Установка ГБО
+                    article.flexible
+                        .delivery-menu
+                            button(class="accordion mob-only", type="button") Выбрать способ доставки
+                            nav.accordion-panel
+                                ul
+                                    li Новая Почта
+                                    li
+                                        a(href="#") Самовывоз
+                                    li
+                                        a(href="#") Курьер по Харькову
+                                    li
+                                        a(href="#") Интайм
+                                    li
+                                        a(href="#") Автолюкс
+                                    li
+                                        a(href="#") Деливери
+                                    li
+                                        a(href="#") Гюнсел
+                        .delivery
+                            .delivery__heading.flexible
+                                div
+                                    img(src="images/novaya-pochta.jpg", alt="")
+                                div
+                                    h2 Новая Почта
+                                    a(href="#") Адреса отделений Новой Почты
+                            p С помощью доставки Новой Почтой, Вы можете получить товар во всех регионах Украины, даже в самых отдаленных местах.
+                            p В среднем, доставка занимает 1-3 дня, во время заказа наши менеджеры согласуют с Вами дату доставки перед отправкой товара.
+                            p #[strong ВНИМАНИЕ!] Заказ хранится в отделении Новой Почты не более 5 рабочих дней, после чего отправляется обратно! Получить заказ может только человек, указанный в транспортной декларации как получатель. При себе необходимо обязательно иметь удостоверение личности!
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

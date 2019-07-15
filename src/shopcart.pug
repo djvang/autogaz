@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Корзина'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer
+            include partials/__header.html
+            .content.container.shopcart-content
+                .content__header.flexible
+                    h1 Моя корзина
+                    p
+                        a(href="#") Продолжить покупки
+                include partials/__form-shopcart.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html

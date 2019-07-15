@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Поиск нет результатов'
+        include partials/__head
+    body
+        .search-page#outer
+            include partials/__header.html
+            .content.container.flexible
+                .search-result
+                    h1 По запросу #[span редуктар] нет&nbsp;результатов
+                    p Возможно, вы ввели некорректный запрос. Проверьте правильность написания. Старайтесь использовать только ключевые слова.
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-search.html

@@ -1,0 +1,34 @@
+<script>
+// banner's slider
+jQuery(function($){
+    $('.slick-slider').slick({
+        arrows: false,
+        dots: true,
+        adaptiveHeight: true,
+        autoplay: true
+    });
+});
+
+// scrollbar custom
+jQuery(function($){
+    $('.scrollbar-outer').scrollbar();
+});
+
+// popular item mob
+var popularBtnLoad = $('.item--btn-load');
+var popularHiddenCards = popularBtnLoad.siblings('.card.no-mob');
+popularBtnLoad.on('click', function() {
+    $(this).hide();
+    popularHiddenCards.removeClass('no-mob');
+});
+
+// description more
+var moreBtn = $('.btn-more');
+
+moreBtn.each(function() {
+    $(this).click(function() {
+        $(this).siblings('.panel__more').toggleClass('js-show');
+        $(this).toggleClass('js-toggle-text');
+    });
+});
+</script>

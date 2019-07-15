@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Контакты'
+        include partials/__head
+    body
+        .contacts-page#outer
+            include partials/__important-info.html
+            include partials/__header.html
+            .content.container.flexible
+                .contacts
+                    section
+                        h3 Консультации и заказ по телефонам
+                        .call-center.flexible
+                            .call-center__tel
+                                a(href="tel:")
+                                    b (063) 320&ndash;12&ndash;12
+                                span Lifecell
+                                a(href="tel:")
+                                    b (068) 320&ndash;12&ndash;12
+                                span Киевстар
+
+                            .call-center__schedule.schedule
+                                p График работы call-центра
+                                ul
+                                    li
+                                        span Понедельник—Пятница
+                                        span с 9:00 до 18:00
+                                    li
+                                        span Суббота
+                                        span с 9:00 до 15:00
+                                    li
+                                        span Воскресенье
+                                        span с 10:00 до 15:00
+                    section
+                        h3 Магазин АвтоГаз12 в Харькове
+                        .store.flexible
+                            .store__address
+                                mark Магазин №12
+                                b Авторынок «Лоск» — восточная сторона
+                                p пл. Юрия Кононенко, 1, 61000, Харьков
+                            .store__schedule.schedule
+                                p График работы магазина-склада
+                                ul
+                                    li
+                                        span Вторник—Пятница
+                                        span с 8:00 до 16:00
+                                    li
+                                        span Суббота
+                                        span с 8:00 до 15:00
+                                    li
+                                        span Воскресенье
+                                        span с 9:00 до 14:00
+                                    li
+                                        span
+                                            strong Понедельник
+                                        span
+                                            strong выходной
+                .map#map
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts-contacts.html

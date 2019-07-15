@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Акция страница'
+        include partials/__head
+    body
+        #outer
+            include partials/__important-info.html
+            include partials/__header.html
+            .content.container.flexible
+                aside.desktop-only
+                    nav
+                        ul
+                            li.active
+                                a(href="#") Акции
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Статьи и обзоры
+                        ul
+                            li
+                                a(href="#") Часто задаваемые вопросы
+                        ul
+                            li
+                                a(href="#") Способы оплаты
+                            li
+                                a(href="#") Условия доставки
+                            li
+                                a(href="#") Обмен и возврат товаров
+                        ul
+                            li
+                                a(href="#") О магазине
+                            li
+                                a(href="#") Установка ГБО                
+                main.main-promotion
+                    include partials/__breadcrumbs
+                    header.flexible
+                        h1 Самая низкая цена! Комплект STAG-200 GoFast 4 цил. (ред. Alaska, форс. Valtek, фил. 11/11) + тор. 42л. Atiker + мул. Tomasetto
+                        .promotion-counter.flexible.no-mob
+                            b 30 #[span дней]
+                            span Осталось до конца акции
+                    article
+                        include partials/__promotion-page.html
+                        include partials/__product-gift.html
+                        .promotional.cards-block
+                            p
+                                b Товары участвующие в акции
+                            include partials/__promotional-cards.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-promotion.html

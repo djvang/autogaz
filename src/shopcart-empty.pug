@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        - var title = 'Autogas12 - Корзина (пусто)'
+        - var cabinet = true
+        include partials/__head
+    body
+        #outer
+            include partials/__header.html
+            .content.container.flexible.shopcart-content
+                .shopcart-empty
+                    h2 Ваша корзина пуста
+                    p Обратите внимание на наши акции или #[a(href="#") продолжите покупки]
+                .recent.cards-block
+                    p
+                        b Товары, которые вы смотрели
+                    include partials/__recent.html
+            include partials/__footer.html
+        include partials/__modals.html
+        include partials/__scripts.html
+        include partials/__scripts-shopcart-empty.html

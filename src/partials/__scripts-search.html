@@ -1,0 +1,23 @@
+<script>
+// fancybox
+var html = $('html');
+var body = $('body');
+var outer = $('#outer');
+
+$('.btn--sidebar').fancybox({
+    autoFocus: false,
+    touch: false,
+    beforeShow: function(){
+        html.addClass('modal-active');
+        body.addClass('js-modal-sidebar')
+        outer.addClass('blurred');
+    },
+    beforeClose: function(){
+        html.removeClass('modal-active');
+        outer.removeClass('blurred');
+    },
+    afterClose: function(){
+        body.removeClass('js-modal-sidebar')
+    }
+});
+</script>
